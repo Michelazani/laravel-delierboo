@@ -4,13 +4,18 @@ $restaurants = [
     'restaurants' => [
         [
             "id" => 1,
-            "email" => "ristorddanteitaliano@gmail.com",
-            "password" => "02154",
-            "name" => "Ristorante Italiano",
-            "lastname" => "Ristorante Italiano",
-            "address" => "Corso Buenos Aires 3 - Milano (MI), 20123 Italia",
-            "vat" => "IT12345678901",
-            "image" => "",
+
+            //USER
+            "name_user" => "Gino",
+            "lastname_user" => "Debellis",
+            "email_user" => "ristoranteitaliano@gmail.com", //EMAIL UTENTE/RISTO??? stessa email???
+            "password_user" => "XXXXXX",
+
+            //RESTAURANT
+            "name_restaurant"  => "Ristorante Italiano", //aggiunto voce name 
+            "address_restaurant" => "Corso Buenos Aires 3 - Milano (MI), 20123 Italia",
+            "vat_restaurant" => "IT12345678901",
+            "image_restaurant" => "",
             "type" => "Italiano" , 
             "menu" => [
                 ["name" => "Pasta alla carbonara", "price" => 12.99, "ingredients" => "pasta, uova, guanciale, pecorino", "Available" => "true", "img_dish" => "",],
@@ -23,13 +28,18 @@ $restaurants = [
         ],
         [
             "id" => 2,
-            "name" => "Ristorante Cinese Wan Yuan",
-            "lastname" => "Ristoranedete Italiano",
-            "email" => "ristoranteita44liano@gmail.com",
-            "password" => "02154",
-            "address" => "Via Paolo Sarpi, 123 - Milano (MI), 20123 Italia",
-            "vat" => "IT1234567890",
-            "image" => "",
+
+            //USER
+            "name_user" => "David",
+            "lastname_user" => "Chang",
+            "email_user" => "RistoranteWanYuan@gmail.com",
+            "password_user" => "XXXXXX",
+
+            //RESTAURANT
+            "name_restaurant"  => "Ristorante Cinese Wan Yuan", //aggiunto voce name 
+            "address_restaurant" => "Via Paolo Sarpi, 123 - Milano (MI), 20123 Italia",
+            "vat_restaurant" => "IT1234567890",
+            "image_restaurant" => "",
             "type" => "Cinese" , 
             "menu" => [
                 ["name" => "Anatra all'arancia", "price" => 14.99, "ingredients" => "anatra, arancia, soia, zenzero", "Available" => "true","img_dish" => "",],
@@ -42,13 +52,18 @@ $restaurants = [
         ],
         [
             "id" => 3,
-            "name" => "Pizzeria Napoli",
-            "lastname" => "Ristorantedf Italiano",
-            "email" => "ristoranteicvtaliano@gmail.com",
-            "password" => "02154",
-            "address" => "Via Roberto Sarfatti - Milano (MI), 20123 Italia",
-            "vat" => "IT98765432109",
-            "image" => "",
+
+            //USER
+            "name_user" => "Pasquale",
+            "lastname_user" => "Ghirardi",
+            "email_user" => "info@pizzerianapoli.it",
+            "password_user" => "XXXXXX",
+
+            //RESTAURANT
+            "name_restaurant"  => "Pizzeria Napoli", //aggiunto voce name 
+            "address_restaurant" => "Via Roberto Sarfatti - Milano (MI), 20123 Italia",
+            "vat_restaurant" => "IT98765432109",
+            "image_restaurant" => "",
             "type" => "Pizzeria, Italiano" , 
             "menu" => [
                 ["name" => "Margherita", "price" => 10.99, "ingredients" => "pomodoro, mozzarella, basilico", "Available" => "true","img_dish" => "",],
@@ -61,13 +76,18 @@ $restaurants = [
         ],
         [
             "id" => 4,
-            "name" => "Sushi Fusion",
-            "lastname" => "Ristorante Itdffaliano",
-            "email" => "ristorantbbeitaliano@gmail.com",
-            "password" => "02154",
-            "address" => "Via Bligny 1 - Milano (MI), 20123 Italia",
-            "vat" => "IT71955306825",
-            "image" => "",
+
+            //USER
+            "name_user" => "Morimoto",
+            "lastname_user" => "Masaharu",
+            "email_user" => "sushifusion@gmail.com",
+            "password_user" => "XXXXXX",
+
+            //RESTAURANT 
+            "name_restaurant"  => "Sushi Fusion", //aggiunto voce name 
+            "address_restaurant" => "Via Bligny 1 - Milano (MI), 20123 Italia",
+            "vat_restaurant" => "IT71955306825",
+            "image_restaurant" => "",
             "type" => "Giapponese" , 
             "menu" => [
                 ["name" => "Sushi assortito", "price" => 19.99, "ingredients" => "riso, pesce crudo, alga nori, wasabi", "Available" => "true","img_dish" => "",],
@@ -80,13 +100,18 @@ $restaurants = [
         ],
         [
             "id" => 5,
-            "name" => "Frutti di Mare",
-            "lastname" => "Ristorante Italianefdwo",
-            "email" => "ristoranmnteitaliano@gmail.com",
-            "password" => "02154",
-            "address" => "Via Paolo Sarpi, 12 - Milano (MI), 20123 Italia",
-            "vat" => "IT13345678901",
-            "image" => "",
+
+            //USER
+            "name_user" => "Luciana",
+            "lastname_user" => "Rossi",
+            "email_user" => "frutti.di.mare@gmail.com",
+            "password_user" => "XXXXXX",
+
+            //RESTAURANT
+            "name_restaurant"  => "Frutti di Mare", //aggiunto voce name 
+            "address_restaurant" => "Via Paolo Sarpi, 12 - Milano (MI), 20123 Italia",
+            "vat_restaurant" => "IT13345678901",
+            "image_restaurant" => "",
             "type" => "Pesce" , 
             "menu" => [
                 ["name" => "Antipasto di mare", "price" => 16.99, "ingredients" => "gamberi, calamari, mussels, limone", "Available" => "true","img_dish" => "",],
@@ -99,13 +124,18 @@ $restaurants = [
         ],
         [
             "id" => 6,
-            "name" => "Taqueria del Sol",
-            "lastname" => "Ristorante Italianerfeo",
-            "email" => "ristojyranteitaliano@gmail.com",
-            "password" => "02154",
-            "address" => "Via Lambertenghi 30 - Milano (MI), 20123 Italia",
-            "vat" => "IT98765432109",
-            "image" => "",
+
+            //USER
+            "name_user" => "Javier",
+            "lastname_user" => "Plascencia",
+            "email_user" => "taqueriadelsol@gmail.com",
+            "password_user" => "XXXXXX",
+
+            //RESTAURANT 
+            "name_restaurant"  => "Taqueria del Sol", //aggiunto voce name 
+            "address_restaurant" => "Via Lambertenghi 30 - Milano (MI), 20123 Italia",
+            "vat_restaurant" => "IT98765432179",
+            "image_restaurant" => "",
             "type" => "Messicano" , 
             "menu" => [
                 ["name" => "Taco al pastor", "price" => 3.99, "ingredients" => "maiale marinato, cipolla, coriandolo",  "Available" => "true","img_dish" => "",],
@@ -118,13 +148,18 @@ $restaurants = [
         ],
         [
             "id" => 7,
-            "name" => "Chef's Delight",
-            "lastname" => "Ristorante Italianofed",
-            "email" => "ristgoranteitaliano@gmail.com",
-            "password" => "02154",
-            "address" => "Via Carlo Porta, 456 - Milano (MI), 20123 Italia",
-            "vat" =>"IT9876543210",
-            "image" => "",
+
+            //USER
+            "name_user" => "Francesco",
+            "lastname_user" => "Laturro",
+            "email_user" => "info@chefsdelightristorante.it",
+            "password_user" => "XXXXXX",
+
+            //RESTAURANT 
+            "name_restaurant"  => "Chef's Delight", //aggiunto voce name 
+            "address_restaurant" => "Via Carlo Porta, 456 - Milano (MI), 20123 Italia",
+            "vat_restaurant" =>"IT9876543510",
+            "image_restaurant" => "",
             "type" => "Italiano" , 
             "menu" => [
                 ["name" => "Antipasto dello chef", "price" => 20.99, "ingredients" => "selezione dello chef di formaggi e affettati", "Available" => "true","img_dish" => "",],
@@ -137,13 +172,18 @@ $restaurants = [
         ],
         [
             "id" => 8,
-            "name" => "El Rincon Mexicano",
-            "lastname" => "Ristorante Italianoffs",
-            "email" => "riqrstoranteitaliano@gmail.com",
-            "password" => "02154",
-            "address" => "Piazzale Cadorna - Milano (MI), 20123 Italia",
-            "vat" => "IT98765432108",
-            "image" => "",
+
+            //USER
+            "name_user" => "Rick",
+            "lastname_user" => "Bayless",
+            "email_user" => "info@elrinconmexicano.it",
+            "password_user" => "XXXXXX",
+
+            //RESTAURANT 
+            "name_restaurant"  => "El Rincon Mexicano", //aggiunto voce name 
+            "address_restaurant" => "Piazzale Cadorna - Milano (MI), 20123 Italia",
+            "vat_restaurant" => "IT98763432108",
+            "image_restaurant" => "",
             "type" => "Messicano",
             "menu" => [
                 ["name" => "Enchiladas al pollo", "price" => 8.99, "ingredients" => "pollo, tortillas, salsa di pomodoro, formaggio",  "Available" => "true","img_dish" => "",],
@@ -155,13 +195,18 @@ $restaurants = [
         ],
         [
             "id" => 9,
-            "name" => "La Fiesta Grill",
-            "lastname" => "Ristorante Italianof",
-            "email" => "rqistoranteitaliano@gmail.com",
-            "password" => "02154",
-            "address" => "Corso Como 32 - Milano (MI), 20123 Italia",
-            "vat" => "IT02827916519",
-            "image" => "",
+
+            //USER
+            "name_user" => "Gabriela",
+            "lastname_user" => "Cámara",
+            "email_user" => "lafiestagrill@gmail.com",
+            "password_user" => "XXXXXX",
+
+            //RESTAURANT 
+            "name_restaurant"  => "La Fiesta Grill", //aggiunto voce name 
+            "address_restaurant" => "Corso Como 32 - Milano (MI), 20123 Italia",
+            "vat_restaurant" => "IT02822916519",
+            "image_restaurant" => "",
             "type" => "Messicano",
             "menu" => [
                 ["name" => "Tacos al pastor", "price" => 4.99, "ingredients" => "maiale marinato, cipolla, coriandolo", "Available" => "true","img_dish" => "",],

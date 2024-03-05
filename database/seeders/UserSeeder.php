@@ -17,10 +17,10 @@ class UserSeeder extends Seeder
 
         foreach ($restaurants as $user) {
             $newuser = new User();
-            $newuser-> email=$user['email'];
-            $newuser-> password=$user['password'];
-            $newuser-> name=$user['name'];
-            $newuser-> lastname=$user['lastname'];
+            $newuser-> email_user=$user['email_user'];
+            $newuser-> password_user=$user['password_user'];
+            $newuser-> name_user=$user['name_user'];
+            $newuser-> lastname_user=$user['lastname_user'];
             $newuser->save();
         }
     }
