@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
-use App\Http\Controllers\Admin\PortfolioController as AdminPortfolioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,5 +23,4 @@ Route::middleware('auth')
     ->prefix('admin')
     ->group(function () {
         Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
-        Route::resource('/portfolios', AdminPortfolioController::class);
     });
