@@ -51,12 +51,12 @@
                         @else
                                 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('admin.portfolios.index') }}">
+                            <a class="nav-link" href="#">
                                 Project
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('admin.portfolios.create') }}">
+                            <a class="nav-link" href="#">
                                 Create new project
                             </a>
                         </li>
