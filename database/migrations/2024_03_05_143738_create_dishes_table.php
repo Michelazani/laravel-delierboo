@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('name', 100)->nullable(false);
             $table->string('img_dish', 150)->nullable();
             $table->decimal('price', 10, 2)->nullable(false);
-            $table->json('ingredients')->nullable(false);
-            $table->boolean('visibility')->nullable(false);
+            $table->string('ingredients',255)->nullable(false);
+            $table->boolean('available')->nullable(false);
             $table->timestamps();
         });
     }
