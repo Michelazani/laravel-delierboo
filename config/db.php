@@ -8,11 +8,12 @@ $restaurants = [
             //USER
             "name_user" => "Gino",
             "lastname_user" => "Debellis",
-            "email_user" => "ristoranteitaliano@gmail.com", //EMAIL UTENTE/RISTO??? stessa email???
+            "email_user" => "GinoDebellis@gmail.com", 
             "password_user" => "XXXXXX",
 
             //RESTAURANT
-            "name_restaurant"  => "Ristorante Italiano", //aggiunto voce name 
+            "name_restaurant"  => "Ristorante Italiano", 
+            "email_restaurant" => "ristoranteitaliano@gmail.com",
             "address_restaurant" => "Corso Buenos Aires 3 - Milano (MI), 20123 Italia",
             "vat_restaurant" => "IT12345678901",
             "image_restaurant" => "",
@@ -32,11 +33,12 @@ $restaurants = [
             //USER
             "name_user" => "David",
             "lastname_user" => "Chang",
-            "email_user" => "RistoranteWanYuan@gmail.com",
+            "email_user" => "DavidChang@gmail.com",
             "password_user" => "XXXXXX",
 
             //RESTAURANT
-            "name_restaurant"  => "Ristorante Cinese Wan Yuan", //aggiunto voce name 
+            "name_restaurant"  => "Ristorante Cinese Wan Yuan", 
+            "email_restaurant" => "RistoranteWanYuan@gmail.com",
             "address_restaurant" => "Via Paolo Sarpi, 123 - Milano (MI), 20123 Italia",
             "vat_restaurant" => "IT1234567890",
             "image_restaurant" => "",
@@ -56,11 +58,12 @@ $restaurants = [
             //USER
             "name_user" => "Pasquale",
             "lastname_user" => "Ghirardi",
-            "email_user" => "info@pizzerianapoli.it",
+            "email_user" => "Pasqualeghirardi74@gmail.com",
             "password_user" => "XXXXXX",
 
             //RESTAURANT
-            "name_restaurant"  => "Pizzeria Napoli", //aggiunto voce name 
+            "name_restaurant"  => "Pizzeria Napoli", 
+            "email_restaurant" => "info@pizzerianapoli.it",
             "address_restaurant" => "Via Roberto Sarfatti - Milano (MI), 20123 Italia",
             "vat_restaurant" => "IT98765432109",
             "image_restaurant" => "",
@@ -80,11 +83,12 @@ $restaurants = [
             //USER
             "name_user" => "Morimoto",
             "lastname_user" => "Masaharu",
-            "email_user" => "sushifusion@gmail.com",
+            "email_user" => "Morimotomasaharu@hotmail.com",
             "password_user" => "XXXXXX",
 
             //RESTAURANT 
-            "name_restaurant"  => "Sushi Fusion", //aggiunto voce name 
+            "name_restaurant"  => "Sushi Fusion", 
+            "email_restaurant" => "sushifusion@gmail.com",
             "address_restaurant" => "Via Bligny 1 - Milano (MI), 20123 Italia",
             "vat_restaurant" => "IT71955306825",
             "image_restaurant" => "",
@@ -104,11 +108,12 @@ $restaurants = [
             //USER
             "name_user" => "Luciana",
             "lastname_user" => "Rossi",
-            "email_user" => "frutti.di.mare@gmail.com",
+            "email_user" => "LucinaRossi@gmail.com",
             "password_user" => "XXXXXX",
 
             //RESTAURANT
-            "name_restaurant"  => "Frutti di Mare", //aggiunto voce name 
+            "name_restaurant"  => "Frutti di Mare", 
+            "email_restaurant" => "frutti.di.mare@gmail.com",
             "address_restaurant" => "Via Paolo Sarpi, 12 - Milano (MI), 20123 Italia",
             "vat_restaurant" => "IT13345678901",
             "image_restaurant" => "",
@@ -128,11 +133,12 @@ $restaurants = [
             //USER
             "name_user" => "Javier",
             "lastname_user" => "Plascencia",
-            "email_user" => "taqueriadelsol@gmail.com",
+            "email_user" => "JavierPlascencia@gmail.com",
             "password_user" => "XXXXXX",
 
             //RESTAURANT 
-            "name_restaurant"  => "Taqueria del Sol", //aggiunto voce name 
+            "name_restaurant"  => "Taqueria del Sol", 
+            "email_restaurant" => "taqueriadelsol@gmail.com",
             "address_restaurant" => "Via Lambertenghi 30 - Milano (MI), 20123 Italia",
             "vat_restaurant" => "IT98765432179",
             "image_restaurant" => "",
@@ -156,7 +162,7 @@ $restaurants = [
             "password_user" => "XXXXXX",
 
             //RESTAURANT 
-            "name_restaurant"  => "Chef's Delight", //aggiunto voce name 
+            "name_restaurant"  => "Chef's Delight", 
             "address_restaurant" => "Via Carlo Porta, 456 - Milano (MI), 20123 Italia",
             "vat_restaurant" =>"IT9876543510",
             "image_restaurant" => "",
@@ -180,7 +186,7 @@ $restaurants = [
             "password_user" => "XXXXXX",
 
             //RESTAURANT 
-            "name_restaurant"  => "El Rincon Mexicano", //aggiunto voce name 
+            "name_restaurant"  => "El Rincon Mexicano", 
             "address_restaurant" => "Piazzale Cadorna - Milano (MI), 20123 Italia",
             "vat_restaurant" => "IT98763432108",
             "image_restaurant" => "",
@@ -203,7 +209,7 @@ $restaurants = [
             "password_user" => "XXXXXX",
 
             //RESTAURANT 
-            "name_restaurant"  => "La Fiesta Grill", //aggiunto voce name 
+            "name_restaurant"  => "La Fiesta Grill", 
             "address_restaurant" => "Corso Como 32 - Milano (MI), 20123 Italia",
             "vat_restaurant" => "IT02822916519",
             "image_restaurant" => "",
