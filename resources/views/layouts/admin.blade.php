@@ -41,12 +41,12 @@
                         <ul class=" ms-auto">
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('admin.portfolios.index') }}">
-                                    Project
+                                    Food
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('admin.portfolios.create') }}">
-                                    Create new project
+                                    Create new dish
                                 </a>
                             </li>
                         </ul>
