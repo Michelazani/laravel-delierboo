@@ -17,10 +17,10 @@ class RestaurantSeeder extends Seeder
 
         foreach ($restaurants as $restaurant) {
             $newrestaurant = new restaurant();
-            $newrestaurant-> user_id=$restaurant['user_id'];
-            $newrestaurant-> name=$restaurant['name'];
-            $newrestaurant-> address=$restaurant['address'];
-            $newrestaurant-> vat=$restaurant['vat'];
+            $newrestaurant-> user_id=$restaurant['id'];
+            $newrestaurant-> name_restaurant=$restaurant['name_restaurant'];
+            $newrestaurant-> address_restaurant=$restaurant['address_restaurant'];
+            $newrestaurant-> vat_restaurant=$restaurant['vat_restaurant'];
             $newrestaurant->save();
         }
     }

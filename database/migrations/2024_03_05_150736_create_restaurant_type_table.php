@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('restaurant_type', function (Blueprint $table) {
-            //creo colonna rest_user_id e la posiziono dopo id nella tab dip 
+             
             $table->unsignedBigInteger('restaurant_id');
-            //creo vincolo foreign key e faccio riferimento alla colonna rest_user_id che fa riferimento alla colonna 'id' della tabella 'rest_users'
+            
             $table->foreign('restaurant_id')->references('id')->on('restaurants')->cascadeOnDelete();
 
             $table->unsignedBigInteger('type_id');
