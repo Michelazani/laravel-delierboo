@@ -27,6 +27,9 @@ $restaurants = [
                 ["name" => "Insalata di stagione", "price" => 7.99, "ingredients" => "insalata mista, pomodoro, olive, olio d'oliva","available" => true,"img_dish" => "",],
                 ["name" => "Tiramisù", "price" => 6.99, "ingredients" => "savoiardi, mascarpone, uova, caffè","available" => true,],
                 ["name" => "Acqua minerale", "price" => 1.99, "ingredients" => "acqua, minerali","available" => true, "img_dish" => "",],
+            ],
+            "orders" => [
+                ["total_price" => "25.15", "customer_address" => "Via volta 12", "customer_name" => "Gino", "customer_surname" => "Ginetti", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "1112223344", "customer_email" => "gino@gmail.com",],
             ]
         ],
         [
@@ -52,6 +55,9 @@ $restaurants = [
                 ["name" => "Riso fritto", "price" => 8.99, "ingredients" => "riso, uova, piselli, cipolla","available" => true,"img_dish" => "",],
                 ["name" => "Gelato al sesamo", "price" => 5.99, "ingredients" => "latte, sesamo, zucchero","available" => true,"img_dish" => "",],
                 ["name" => "Birra Tsingtao", "price" => 3.99, "ingredients" => "acqua, malto d'orzo, luppolo","available" => true,"img_dish" => "",],
+            ],
+            "orders" => [
+                ["total_price" => "25.15", "customer_address" => "Via volta 12", "customer_name" => "Gino", "customer_surname" => "Ginetti", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "1112223344", "customer_email" => "gino@gmail.com",],
             ]
         ],
         [
@@ -77,6 +83,9 @@ $restaurants = [
                 ["name" => "Calzone", "price" => 13.99, "ingredients" => "mozzarella, ricotta, prosciutto, funghi, pomodoro","available" => true,"img_dish" => "",],
                 ["name" => "Tiramisù", "price" => 6.99, "ingredients" => "savoiardi, mascarpone, cacao, caffè","available" => true,"img_dish" => "",],
                 ["name" => "Coca-Cola", "price" => 1.99, "ingredients" => "acqua, zucchero, anidride carbonica, coloranti","available" => true,"img_dish" => "",],
+            ],
+            "orders" => [
+                ["total_price" => "25.15", "customer_address" => "Via volta 12", "customer_name" => "Gino", "customer_surname" => "Ginetti", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "1112223344", "customer_email" => "gino@gmail.com",],
             ]
         ],
         [
@@ -102,6 +111,9 @@ $restaurants = [
                 ["name" => "Edamame", "price" => 6.99, "ingredients" => "fagioli di soia, sale", "category" => "Antipasto","available" => true ,"img_dish" => "",],
                 ["name" => "Matcha affogato", "price" => 8.99, "ingredients" => "gelato al matcha, tè verde matcha","available" => true,"img_dish" => "",],
                 ["name" => "Saké giapponese", "price" => 9.99, "ingredients" => "riso, acqua, fermentazione","available" => true,"img_dish" => "",]
+            ],
+            "orders" => [
+                ["total_price" => "25.15", "customer_address" => "Via volta 12", "customer_name" => "Gino", "customer_surname" => "Ginetti", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "1112223344", "customer_email" => "gino@gmail.com",],
             ]
         ],
         [
@@ -127,6 +139,9 @@ $restaurants = [
                 ["name" => "Insalata di mare", "price" => 14.99, "ingredients" => "polpo, calamari, pomodorini, olive", "available" => true,"img_dish" => "",],
                 ["name" => "Panna cotta al limone", "price" => 7.99, "ingredients" => "panna, limone, zucchero","available" => true,"img_dish" => "",],
                 ["name" => "Rosso di casa mia", "price" => 15.99, "ingredients" => "uva, fermentazione, amore" ,"available" => true,"img_dish" => "",]
+            ],
+            "orders" => [
+                ["total_price" => "25.15", "customer_address" => "Via volta 12", "customer_name" => "Gino", "customer_surname" => "Ginetti", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "1112223344", "customer_email" => "gino@gmail.com",],
             ]
         ],
         [
@@ -152,6 +167,9 @@ $restaurants = [
                 ["name" => "Salsa di mango", "price" => 2.99, "ingredients" => "mango, peperoncino, cipolla, coriandolo", "available" => true,"img_dish" => "",],
                 ["name" => "Churros con cioccolato", "price" => 4.99, "ingredients" => "churros, cioccolato fuso","available" => true,"img_dish" => "",],
                 ["name" => "Corona Extra", "price" => 3.49, "ingredients" => "acqua, malto d'orzo, luppolo","available" => true,"img_dish" => "",],
+            ],
+            "orders" => [
+                ["total_price" => "25.15", "customer_address" => "Via volta 12", "customer_name" => "Gino", "customer_surname" => "Ginetti", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "1112223344", "customer_email" => "gino@gmail.com",],
             ]
         ],
         [
@@ -176,6 +194,9 @@ $restaurants = [
                 ["name" => "Insalata gourmet", "price" => 15.99, "ingredients" => "insalata mista, noci, formaggio di capra, miele","available" => true,"img_dish" => "",],
                 ["name" => "Panna cotta al cioccolato bianco", "price" => 8.99, "ingredients" => "panna, cioccolato bianco, frutti di bosco", "available" => true,"img_dish" => "",],
                 ["name" => "DonnaFugata", "price" => 17.99, "ingredients" => "uva, fermentazione, gioia","available" => true,"img_dish" => "",],
+            ],
+            "orders" => [
+                ["total_price" => "25.15", "customer_address" => "Via volta 12", "customer_name" => "Gino", "customer_surname" => "Ginetti", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "1112223344", "customer_email" => "gino@gmail.com",],
             ]
         ],
         [
@@ -199,6 +220,9 @@ $restaurants = [
                 ["name" => "Tostadas con carne", "price" => 6.99, "ingredients" => "carne macinata, fagioli neri, lattuga, formaggio","available" => true,"img_dish" => "",],
                 ["name" => "Flan al caramello", "price" => 5.99, "ingredients" => "latte condensato, uova, zucchero","available" => true,"img_dish" => "",],
                 ["name" => "Corona Extra", "price" => 3.49, "ingredients" => "acqua, malto d'orzo, luppolo","available" => true,"img_dish" => "",],
+            ],
+            "orders" => [
+                ["total_price" => "25.15", "customer_address" => "Via volta 12", "customer_name" => "Gino", "customer_surname" => "Ginetti", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "1112223344", "customer_email" => "gino@gmail.com",],
             ]
         ],
         [
@@ -222,6 +246,9 @@ $restaurants = [
                 ["name" => "Burrito vegetariano", "price" => 7.99, "ingredients" => "tortilla di farina, fagioli neri, riso, avocado","available" => true,"img_dish" => "",],
                 ["name" => "Tres Leches", "price" => 5.99, "ingredients" => "torta, latte condensato, panna montata","available" => true,"img_dish" => "",],
                 ["name" => "Pacifico Clara", "price" => 3.79, "ingredients" => "acqua, malto d'orzo, luppolo","available" => true,"img_dish" => "",],
+            ],
+            "orders" => [
+                ["total_price" => "25.15", "customer_address" => "Via volta 12", "customer_name" => "Gino", "customer_surname" => "Ginetti", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "1112223344", "customer_email" => "gino@gmail.com",],
             ]
         ],
     ]

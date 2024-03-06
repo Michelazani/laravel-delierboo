@@ -16,7 +16,7 @@ class RestaurantSeeder extends Seeder
         $restaurants = config ('db.restaurants');
 
         foreach ($restaurants as $restaurant) {
-            $newrestaurant = new restaurant();
+            $newrestaurant = new Restaurant();
             $newrestaurant-> user_id=$restaurant['id'];
             $newrestaurant-> name_restaurant=$restaurant['name_restaurant'];
             $newrestaurant-> address_restaurant=$restaurant['address_restaurant'];
