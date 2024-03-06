@@ -29,7 +29,7 @@ $restaurants = [
                 ["name" => "Acqua minerale", "price" => 1.99, "ingredients" => "acqua, minerali","available" => true, "img_dish" => "",],
             ],
             "orders" => [
-                ["total_price" => "25.15", "customer_address" => "Via volta 12", "customer_name" => "Gino", "customer_surname" => "Ginetti", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "1112223344", "customer_email" => "gino@gmail.com",],
+                [ "customer_address" => "Via volta 12", "customer_name" => "Gino", "customer_surname" => "Ginetti", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "1112223344", "customer_email" => "gino@gmail.com",],
             ]
         ],
         [
@@ -57,7 +57,7 @@ $restaurants = [
                 ["name" => "Birra Tsingtao", "price" => 3.99, "ingredients" => "acqua, malto d'orzo, luppolo","available" => true,"img_dish" => "",],
             ],
             "orders" => [
-                ["total_price" => "25.15", "customer_address" => "Via volta 12", "customer_name" => "Gino", "customer_surname" => "Ginetti", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "1112223344", "customer_email" => "gino@gmail.com",],
+                [ "customer_address" => "Via milano 2", "customer_name" => "Mario", "customer_surname" => "Rossi", "date_and_time" => "2023-07-2 19:00:25", "customer_phone" => "1122223347", "customer_email" => "mario@gmail.com",],
             ]
         ],
         [
@@ -85,7 +85,7 @@ $restaurants = [
                 ["name" => "Coca-Cola", "price" => 1.99, "ingredients" => "acqua, zucchero, anidride carbonica, coloranti","available" => true,"img_dish" => "",],
             ],
             "orders" => [
-                ["total_price" => "25.15", "customer_address" => "Via volta 12", "customer_name" => "Gino", "customer_surname" => "Ginetti", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "1112223344", "customer_email" => "gino@gmail.com",],
+                [ "customer_address" => "Via roma 12", "customer_name" => "Giuditta", "customer_surname" => "Verdi", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "9876543211", "customer_email" => "giuditta@gmail.com",],
             ]
         ],
         [
@@ -113,7 +113,7 @@ $restaurants = [
                 ["name" => "Saké giapponese", "price" => 9.99, "ingredients" => "riso, acqua, fermentazione","available" => true,"img_dish" => "",]
             ],
             "orders" => [
-                ["total_price" => "25.15", "customer_address" => "Via volta 12", "customer_name" => "Gino", "customer_surname" => "Ginetti", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "1112223344", "customer_email" => "gino@gmail.com",],
+                [ "customer_address" => "Via aldo moro 7", "customer_name" => "Giacomo", "customer_surname" => "Bianchi", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "1587965874", "customer_email" => "giacomo@gmail.com",],
             ]
         ],
         [
@@ -141,7 +141,7 @@ $restaurants = [
                 ["name" => "Rosso di casa mia", "price" => 15.99, "ingredients" => "uva, fermentazione, amore" ,"available" => true,"img_dish" => "",]
             ],
             "orders" => [
-                ["total_price" => "25.15", "customer_address" => "Via volta 12", "customer_name" => "Gino", "customer_surname" => "Ginetti", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "1112223344", "customer_email" => "gino@gmail.com",],
+                [ "customer_address" => "Via giudy 4", "customer_name" => "Luigi", "customer_surname" => "Luigino", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "4893215687", "customer_email" => "luigi@gmail.com",],
             ]
         ],
         [
@@ -169,7 +169,7 @@ $restaurants = [
                 ["name" => "Corona Extra", "price" => 3.49, "ingredients" => "acqua, malto d'orzo, luppolo","available" => true,"img_dish" => "",],
             ],
             "orders" => [
-                ["total_price" => "25.15", "customer_address" => "Via volta 12", "customer_name" => "Gino", "customer_surname" => "Ginetti", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "1112223344", "customer_email" => "gino@gmail.com",],
+                [ "customer_address" => "Via franchino 12", "customer_name" => "Franco", "customer_surname" => "Franchetti", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "0025896325", "customer_email" => "franco@gmail.com",],
             ]
         ],
         [
@@ -196,7 +196,7 @@ $restaurants = [
                 ["name" => "DonnaFugata", "price" => 17.99, "ingredients" => "uva, fermentazione, gioia","available" => true,"img_dish" => "",],
             ],
             "orders" => [
-                ["total_price" => "25.15", "customer_address" => "Via volta 12", "customer_name" => "Gino", "customer_surname" => "Ginetti", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "1112223344", "customer_email" => "gino@gmail.com",],
+                [ "customer_address" => "Via dante 12", "customer_name" => "Amedeo", "customer_surname" => "Laurenti", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "8470125444", "customer_email" => "amedeo@gmail.com",],
             ]
         ],
         [
@@ -222,7 +222,7 @@ $restaurants = [
                 ["name" => "Corona Extra", "price" => 3.49, "ingredients" => "acqua, malto d'orzo, luppolo","available" => true,"img_dish" => "",],
             ],
             "orders" => [
-                ["total_price" => "25.15", "customer_address" => "Via volta 12", "customer_name" => "Gino", "customer_surname" => "Ginetti", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "1112223344", "customer_email" => "gino@gmail.com",],
+                [ "customer_address" => "Via massoni 12", "customer_name" => "Giorgio", "customer_surname" => "Bonolis", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "2558874102", "customer_email" => "giorgio@gmail.com",],
             ]
         ],
         [
@@ -248,7 +248,7 @@ $restaurants = [
                 ["name" => "Pacifico Clara", "price" => 3.79, "ingredients" => "acqua, malto d'orzo, luppolo","available" => true,"img_dish" => "",],
             ],
             "orders" => [
-                ["total_price" => "25.15", "customer_address" => "Via volta 12", "customer_name" => "Gino", "customer_surname" => "Ginetti", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "1112223344", "customer_email" => "gino@gmail.com",],
+                [ "customer_address" => "Via zanzia 12", "customer_name" => "Vanessa", "customer_surname" => "Rodriguez", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "4488552233", "customer_email" => "vanessa@gmail.com",],
             ]
         ],
     ]
