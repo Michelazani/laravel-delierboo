@@ -6,10 +6,10 @@ $restaurants = [
             "id" => 1,
 
             //USER
-            "name_user" => "Gino",
-            "lastname_user" => "Debellis",
-            "email_user" => "GinoDebellis@gmail.com", 
-            "password_user" => "XXXXXX",
+            "name" => "Gino",
+            "lastname" => "Debellis",
+            "email" => "GinoDebellis@gmail.com", 
+            "password" => "XXXXXX",
 
             //RESTAURANT
             "name_restaurant"  => "Ristorante Italiano", 
@@ -29,17 +29,17 @@ $restaurants = [
                 ["name" => "Acqua minerale", "price" => 1.99, "ingredients" => "acqua, minerali","available" => true, "img_dish" => "",],
             ],
             "orders" => [
-                [ "customer_address" => "Via volta 12", "customer_name" => "Gino", "customer_surname" => "Ginetti", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "1112223344", "customer_email" => "gino@gmail.com",],
+                ["total_price"=>"", "customer_address" => "Via volta 12", "customer_name" => "Gino", "customer_surname" => "Ginetti", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "1112223344", "customer_email" => "gino@gmail.com",],
             ]
         ],
         [
             "id" => 2,
 
             //USER
-            "name_user" => "David",
-            "lastname_user" => "Chang",
-            "email_user" => "DavidChang@gmail.com",
-            "password_user" => "XXXXXX",
+            "name" => "David",
+            "lastname" => "Chang",
+            "email" => "DavidChang@gmail.com",
+            "password" => "XXXXXX",
 
             //RESTAURANT
             "name_restaurant"  => "Ristorante Cinese Wan Yuan", 
@@ -57,17 +57,17 @@ $restaurants = [
                 ["name" => "Birra Tsingtao", "price" => 3.99, "ingredients" => "acqua, malto d'orzo, luppolo","available" => true,"img_dish" => "",],
             ],
             "orders" => [
-                [ "customer_address" => "Via milano 2", "customer_name" => "Mario", "customer_surname" => "Rossi", "date_and_time" => "2023-07-2 19:00:25", "customer_phone" => "1122223347", "customer_email" => "mario@gmail.com",],
+                ["total_price"=>"", "customer_address" => "Via milano 2", "customer_name" => "Mario", "customer_surname" => "Rossi", "date_and_time" => "2023-07-2 19:00:25", "customer_phone" => "1122223347", "customer_email" => "mario@gmail.com",],
             ]
         ],
         [
             "id" => 3,
 
             //USER
-            "name_user" => "Pasquale",
-            "lastname_user" => "Ghirardi",
-            "email_user" => "Pasqualeghirardi74@gmail.com",
-            "password_user" => "XXXXXX",
+            "name" => "Pasquale",
+            "lastname" => "Ghirardi",
+            "email" => "Pasqualeghirardi74@gmail.com",
+            "password" => "XXXXXX",
 
             //RESTAURANT
             "name_restaurant"  => "Pizzeria Napoli", 
@@ -85,17 +85,17 @@ $restaurants = [
                 ["name" => "Coca-Cola", "price" => 1.99, "ingredients" => "acqua, zucchero, anidride carbonica, coloranti","available" => true,"img_dish" => "",],
             ],
             "orders" => [
-                [ "customer_address" => "Via roma 12", "customer_name" => "Giuditta", "customer_surname" => "Verdi", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "9876543211", "customer_email" => "giuditta@gmail.com",],
+                ["total_price"=>"", "customer_address" => "Via roma 12", "customer_name" => "Giuditta", "customer_surname" => "Verdi", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "9876543211", "customer_email" => "giuditta@gmail.com",],
             ]
         ],
         [
             "id" => 4,
 
             //USER
-            "name_user" => "Morimoto",
-            "lastname_user" => "Masaharu",
-            "email_user" => "Morimotomasaharu@hotmail.com",
-            "password_user" => "XXXXXX",
+            "name" => "Morimoto",
+            "lastname" => "Masaharu",
+            "email" => "Morimotomasaharu@hotmail.com",
+            "password" => "XXXXXX",
 
             //RESTAURANT 
             "name_restaurant"  => "Sushi Fusion", 
@@ -113,17 +113,17 @@ $restaurants = [
                 ["name" => "Saké giapponese", "price" => 9.99, "ingredients" => "riso, acqua, fermentazione","available" => true,"img_dish" => "",]
             ],
             "orders" => [
-                [ "customer_address" => "Via aldo moro 7", "customer_name" => "Giacomo", "customer_surname" => "Bianchi", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "1587965874", "customer_email" => "giacomo@gmail.com",],
+                [ "total_price"=>"", "customer_address" => "Via aldo moro 7", "customer_name" => "Giacomo", "customer_surname" => "Bianchi", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "1587965874", "customer_email" => "giacomo@gmail.com",],
             ]
         ],
         [
             "id" => 5,
 
             //USER
-            "name_user" => "Luciana",
-            "lastname_user" => "Rossi",
-            "email_user" => "LucinaRossi@gmail.com",
-            "password_user" => "XXXXXX",
+            "name" => "Luciana",
+            "lastname" => "Rossi",
+            "email" => "LucinaRossi@gmail.com",
+            "password" => "XXXXXX",
 
             //RESTAURANT
             "name_restaurant"  => "Frutti di Mare", 
@@ -141,17 +141,17 @@ $restaurants = [
                 ["name" => "Rosso di casa mia", "price" => 15.99, "ingredients" => "uva, fermentazione, amore" ,"available" => true,"img_dish" => "",]
             ],
             "orders" => [
-                [ "customer_address" => "Via giudy 4", "customer_name" => "Luigi", "customer_surname" => "Luigino", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "4893215687", "customer_email" => "luigi@gmail.com",],
+                [ "total_price"=>"", "customer_address" => "Via giudy 4", "customer_name" => "Luigi", "customer_surname" => "Luigino", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "4893215687", "customer_email" => "luigi@gmail.com",],
             ]
         ],
         [
             "id" => 6,
 
             //USER
-            "name_user" => "Javier",
-            "lastname_user" => "Plascencia",
-            "email_user" => "JavierPlascencia@gmail.com",
-            "password_user" => "XXXXXX",
+            "name" => "Javier",
+            "lastname" => "Plascencia",
+            "email" => "JavierPlascencia@gmail.com",
+            "password" => "XXXXXX",
 
             //RESTAURANT 
             "name_restaurant"  => "Taqueria del Sol", 
@@ -169,17 +169,17 @@ $restaurants = [
                 ["name" => "Corona Extra", "price" => 3.49, "ingredients" => "acqua, malto d'orzo, luppolo","available" => true,"img_dish" => "",],
             ],
             "orders" => [
-                [ "customer_address" => "Via franchino 12", "customer_name" => "Franco", "customer_surname" => "Franchetti", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "0025896325", "customer_email" => "franco@gmail.com",],
+                ["total_price"=>"", "customer_address" => "Via franchino 12", "customer_name" => "Franco", "customer_surname" => "Franchetti", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "0025896325", "customer_email" => "franco@gmail.com",],
             ]
         ],
         [
             "id" => 7,
 
             //USER
-            "name_user" => "Francesco",
-            "lastname_user" => "Laturro",
-            "email_user" => "info@chefsdelightristorante.it",
-            "password_user" => "XXXXXX",
+            "name" => "Francesco",
+            "lastname" => "Laturro",
+            "email" => "info@chefsdelightristorante.it",
+            "password" => "XXXXXX",
 
             //RESTAURANT 
             "name_restaurant"  => "Chef's Delight", 
@@ -196,17 +196,17 @@ $restaurants = [
                 ["name" => "DonnaFugata", "price" => 17.99, "ingredients" => "uva, fermentazione, gioia","available" => true,"img_dish" => "",],
             ],
             "orders" => [
-                [ "customer_address" => "Via dante 12", "customer_name" => "Amedeo", "customer_surname" => "Laurenti", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "8470125444", "customer_email" => "amedeo@gmail.com",],
+                [ "total_price"=>"", "customer_address" => "Via dante 12", "customer_name" => "Amedeo", "customer_surname" => "Laurenti", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "8470125444", "customer_email" => "amedeo@gmail.com",],
             ]
         ],
         [
             "id" => 8,
 
             //USER
-            "name_user" => "Rick",
-            "lastname_user" => "Bayless",
-            "email_user" => "info@elrinconmexicano.it",
-            "password_user" => "XXXXXX",
+            "name" => "Rick",
+            "lastname" => "Bayless",
+            "email" => "info@elrinconmexicano.it",
+            "password" => "XXXXXX",
 
             //RESTAURANT 
             "name_restaurant"  => "El Rincon Mexicano", 
@@ -222,17 +222,17 @@ $restaurants = [
                 ["name" => "Corona Extra", "price" => 3.49, "ingredients" => "acqua, malto d'orzo, luppolo","available" => true,"img_dish" => "",],
             ],
             "orders" => [
-                [ "customer_address" => "Via massoni 12", "customer_name" => "Giorgio", "customer_surname" => "Bonolis", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "2558874102", "customer_email" => "giorgio@gmail.com",],
+                [ "total_price"=>"", "customer_address" => "Via massoni 12", "customer_name" => "Giorgio", "customer_surname" => "Bonolis", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "2558874102", "customer_email" => "giorgio@gmail.com",],
             ]
         ],
         [
             "id" => 9,
 
             //USER
-            "name_user" => "Gabriela",
-            "lastname_user" => "Cámara",
-            "email_user" => "lafiestagrill@gmail.com",
-            "password_user" => "XXXXXX",
+            "name" => "Gabriela",
+            "lastname" => "Cámara",
+            "email" => "lafiestagrill@gmail.com",
+            "password" => "XXXXXX",
 
             //RESTAURANT 
             "name_restaurant"  => "La Fiesta Grill", 
@@ -248,7 +248,7 @@ $restaurants = [
                 ["name" => "Pacifico Clara", "price" => 3.79, "ingredients" => "acqua, malto d'orzo, luppolo","available" => true,"img_dish" => "",],
             ],
             "orders" => [
-                [ "customer_address" => "Via zanzia 12", "customer_name" => "Vanessa", "customer_surname" => "Rodriguez", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "4488552233", "customer_email" => "vanessa@gmail.com",],
+                [ "total_price"=>"", "customer_address" => "Via zanzia 12", "customer_name" => "Vanessa", "customer_surname" => "Rodriguez", "date_and_time" => "2023-05-22 19:00:25", "customer_phone" => "4488552233", "customer_email" => "vanessa@gmail.com",],
             ]
         ],
     ]
