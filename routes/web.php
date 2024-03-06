@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Admin\RestaurantController as AdminRestaurantController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,8 +22,9 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 Route::middleware('auth')
     ->name('admin.')
-    ->prefix('admin')
+    ->prefix('/admin')
     ->group(function () {
-        Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
-        Route::get('/home', [AdminDashboardController::class, 'index'])->name('admin.home');
+        Route::get('/restaurants', [AdminDashboardController::class, 'index'])->name('home');
+        Route::post('/restaurants', [AdminRestaurantController::class, 'store'])->name('restaurants.store');
+        Route::get('/restaurants/create', [AdminRestaurantController::class, 'create'])->name('restaurants.create');
     });

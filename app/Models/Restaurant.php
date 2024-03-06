@@ -12,6 +12,14 @@ use App\Models\Order;
 class Restaurant extends Model
 {
     use HasFactory;
+    // fillable per il controller
+    protected $fillable = [
+        'name_restaurant', 
+        'address_restaurant',
+        'vat_restaurant',
+        'image_restaurant'
+    ];
+
     protected $table = 'restaurants';
 
     public function user(){
