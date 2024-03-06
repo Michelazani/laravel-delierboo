@@ -23,7 +23,23 @@
                     <label for="vat_restaurant" class="input-group-text">P.IVA:</label>
                     <input class="form-control" type="text" name="vat_restaurant" id="vat_restaurant" value="{{ old('vat_restaurant') }}">
                 </div>
-                {{-- aggiungo tipologia e form per mettere le immagini --}}
+                {{-- select per il type --}}
+                <div class="mb-3 input-group">
+                    <label for="type" class="input-group-text">Categoria:</label>
+                    <select class="form-select" type="text" name="type" id="type" >
+                        @foreach ($types as $type)
+                            <option value="{{ $type }}"
+                                {{ $type == old('type', $type->type) ? 'selected' : '' }}>
+                                    {{ $type->name_type }}
+                            </option>
+                        @endforeach
+                    </select>
+                </div>
+                {{--form per mettere le immagini --}}
+                {{-- <div class="mb-3">
+                    <label for="image_restaurant" class="form-label">Immagine:</label>
+                    <input type="text" name="image_restaurant" id="image_restaurant" class="form-control" value="{{ old('image_restaurant', $restaurants->image_restaurant) }}">
+                </div> --}}
                 <div class="mb-3 input-group">
                     <button type="submit" class="btn btn-primary m-2">
                         Crea ristorante

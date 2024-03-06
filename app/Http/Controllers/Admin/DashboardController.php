@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Hash;
 class DashboardController extends Controller
 {
     public function index(){
-        // dd(Auth::user()->password); 
-        return view ('admin.dashboard');
+        // // dd(Auth::user()->password); 
+        return view ('admin.restaurants.show');
     }
 }
