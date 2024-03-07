@@ -7,39 +7,55 @@
     <div class="row justify-content-center ">
         <div class="col-7">
             @include('layouts.partials.errors')
-            <form action="{{ route('admin.dishes.store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('admin.dishes.update') }}" method="POST" enctype="multipart/form-data">
                 @csrf
+                @method('PUT')
 
                 <h2 class="m-4">Crea il piatto:</h2>
                 <div class="mb-3 input-group">
                     <label for="name" class="input-group-text">Nome del piatto:</label>
-                    <input class="form-control" type="text" name="name" id="name" value="{{ old('name') }}">
+                    <input class="form-control" type="text" name="name" id="name" value="{{ $dish['name'] }}">
                 </div>
                 <div class="mb-3 input-group">
                     <label for="price" class="input-group-text">Prezzo:</label>
-                    <input class="form-control" type="text" name="price" id="price" value="{{ old('price') }}">
+                    <input class="form-control" type="text" name="price" id="price" value="{{ $dish['price'] }}">
                 </div>
                 
                 <div class="mb-3 input-group">
                     <label for="ingredients" class="input-group-text">Ingredienti:</label>
-                    <textarea class="form-control"  name="ingredients" id="ingredients" cols="20" rows="5">{{ old('ingredients')  }}</textarea>
+                    <textarea class="form-control"  name="ingredients" id="ingredients" cols="20" rows="5">{{ $dish['ingredients']  }}</textarea>
                 </div>
                 
                 <fieldset class="row mb-3">
                     <legend class="col-form-label col-sm-2 pt-0">Disponibile:</legend>
                     <div class="col-sm-10">
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="available" id="available1" value="{{true}}">
-                        <label class="form-check-label" for="available1">
-                          Si
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="available" id="available2" value="{{false}}">
-                        <label class="form-check-label" for="available2">
-                          No
-                        </label>
-                      </div>
+                    @if ($dish['available']==1)
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="available" id="available1" value="{{true}}" checked>
+                            <label class="form-check-label" for="available1">
+                            Si
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="available" id="available2" value="{{false}}">
+                            <label class="form-check-label" for="available2">
+                            No
+                            </label>
+                        </div>
+                    @else
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="available" id="available1" value="{{true}}" >
+                            <label class="form-check-label" for="available1">
+                            Si
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="available" id="available2" value="{{false}} " checked>
+                            <label class="form-check-label" for="available2">
+                            No
+                            </label>
+                        </div>
+                    @endif
                     </div>
                 </fieldset>
                 

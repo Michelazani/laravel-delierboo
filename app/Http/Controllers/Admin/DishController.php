@@ -32,7 +32,7 @@ class DishController extends Controller
         // $newRestaurantData = $request->all();
         $newDishData = $request->all();
 
-        // dd($request->all());
+        //dd($request->all());
         $newDish = new Dish();
         $newDish -> fill($newDishData);
 
@@ -66,15 +66,19 @@ class DishController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $dish= Dish::where('id', '=', $id)->get()[0];
+        return view('admin.dishes.edit', compact('dish'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Dish $dish)
     {
-        //
+        $data=$request->all();
+        dd($data);
+        $dish->update($data);
+        return redirect()->route('admin.dishes.show', $dish->id);
     }
 
     /**
