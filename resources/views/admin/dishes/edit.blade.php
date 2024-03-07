@@ -29,28 +29,28 @@
                 <fieldset class="row mb-3">
                     <legend class="col-form-label col-sm-2 pt-0">Disponibile:</legend>
                     <div class="col-sm-10">
-                    @if ($dish['available']==1)
+                    @if ($dish['available'])
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="available" id="available1" value="{{true}}" checked>
+                            <input class="form-check-input" type="radio" name="available" id="available1" value="{{1}}" checked>
                             <label class="form-check-label" for="available1">
                             Si
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="available" id="available2" value="{{false}}">
+                            <input class="form-check-input" type="radio" name="available" id="available2" value="{{0}}">
                             <label class="form-check-label" for="available2">
                             No
                             </label>
                         </div>
                     @else
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="available" id="available1" value="{{true}}" >
+                            <input class="form-check-input" type="radio" name="available" id="available1" value="{{1}}" >
                             <label class="form-check-label" for="available1">
                             Si
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="available" id="available2" value="{{false}} " checked>
+                            <input class="form-check-input" type="radio" name="available" id="available2" value="{{0}}" checked>
                             <label class="form-check-label" for="available2">
                             No
                             </label>
@@ -62,11 +62,11 @@
                 <div class="mb-3 input-group">
                     <input class="form-control" type="file" name="image_restaurant" id="image_restaurant" value="">
                 </div>
-                {{-- <div class="invisible">
-                    <label for="user_id" ></label>
-                    <input name="user_id" value="{{ Auth::id() }}">
-                </div>
 
+                <div class="invisible">
+                    <label for="id" ></label>
+                    <input name="id" value="{{ $dish['id'] }}">
+                </div>
                 
                 {{--form per mettere le immagini --}}
                 {{-- <div class="mb-3 input-group">

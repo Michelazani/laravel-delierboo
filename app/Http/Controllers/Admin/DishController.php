@@ -66,19 +66,19 @@ class DishController extends Controller
      */
     public function edit(string $id)
     {
-        $dish= Dish::where('id', '=', $id)->get()[0];
+        $dish = Dish::findOrFail($id);
         return view('admin.dishes.edit', compact('dish'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Dish $dish)
+    public function update(Request $request)
     {
         $data=$request->all();
-        dd($data);
+        $dish= Dish::find($data['id']);
         $dish->update($data);
-        return redirect()->route('admin.dishes.show', $dish->id);
+        return redirect()->route('admin.dishes.show', $data['id']);
     }
 
     /**

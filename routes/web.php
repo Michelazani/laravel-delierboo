@@ -34,6 +34,6 @@ Route::middleware('auth')
         Route::post('/dishes', [AdminDishController::class, 'store'])->name('dishes.store');
         Route::put('/dishes', [AdminDishController::class, 'update'])->name('dishes.update');
         Route::get('/dishes/create', [AdminDishController::class, 'create'])->name('dishes.create');
-        Route::get('/dishes/{dish}/edit', [AdminDishController::class, 'edit'])->name('dishes.edit');
         Route::get('/dishes/{dish}', [AdminDishController::class, 'show'])->name('dishes.show');
+        Route::get('/dishes/{dish}/edit', [AdminDishController::class, 'edit'])->name('dishes.edit');
     });
