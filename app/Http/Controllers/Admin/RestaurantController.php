@@ -14,6 +14,7 @@ class RestaurantController extends Controller
 {
     private $rules = [
         'image_restaurant' => ['image', 'required'],
+        
     ];
     /**
      * Display a listing of the resource.
@@ -44,20 +45,12 @@ class RestaurantController extends Controller
      */
     public function store(Request $request)
     {
-        // $newRestaurantData = $request->all();
-        $newRestaurantData = $request->validate($this->rules);
-
+        $newRestaurantData = $request->all();
         // dd($request->all());
         $newRestaurant = new Restaurant();
-        $newRestaurant -> fill($newRestaurantData);
-
         $imageSrc = Storage::put('uploads/restaurants', $newRestaurantData['image_restaurant']);
         $newRestaurantData['image_restaurant'] = $imageSrc;
-
-
-        //dopo il put metto dove voglio che venga salvato il file , e cosa voglio salvare
-        // $imageSrc = Storage::disk('uploads/restaurants ', $newRestaurantData['image_restaurant']);
-        // $newRestaurantData['image_restaurant'] = $imageSrc;
+        $newRestaurant -> fill($newRestaurantData);
         $newRestaurant->save();
         return redirect()->route('admin.restaurants.show', $newRestaurant->id);
         
