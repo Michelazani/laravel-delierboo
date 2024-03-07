@@ -28,27 +28,27 @@
                 <fieldset class="row mb-3">
                     <legend class="col-form-label col-sm-2 pt-0">Disponibile:</legend>
                     <div class="col-sm-10">
-                    <div class="form-check">
+                      <div class="form-check">
                         <input class="form-check-input" type="radio" name="available" id="available1" value="{{true}}">
                         <label class="form-check-label" for="available1">
-                        Si
+                          Si
                         </label>
-                    </div>
-                    <div class="form-check">
+                      </div>
+                      <div class="form-check">
                         <input class="form-check-input" type="radio" name="available" id="available2" value="{{false}}">
                         <label class="form-check-label" for="available2">
-                        No
+                          No
                         </label>
-                    </div>
+                      </div>
                     </div>
                 </fieldset>
                 
                 <div class="mb-3 input-group">
                     <input class="form-control" type="file" name="image_restaurant" id="image_restaurant" value="">
                 </div>
-                <div class="invisible">
-                    <label for="restaurant_id" ></label>
-                    <input name="restaurant_id" value="{{ $restaurant['id'] }}">
+                {{-- <div class="invisible">
+                    <label for="user_id" ></label>
+                    <input name="user_id" value="{{ Auth::id() }}">
                 </div>
 
                 
@@ -63,7 +63,7 @@
                 </div>  --}}
                 <div class="mb-3 input-group">
                     <button type="submit" class="btn btn-primary m-2">
-                        Aggiungi piatto
+                        Modifica piatto
                     </button>
                     <button type="reset" class="btn btn-warning m-2">
                         Reset

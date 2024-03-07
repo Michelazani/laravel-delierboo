@@ -20,7 +20,8 @@ class DishController extends Controller
      */
     public function create()
     {
-        return view('admin.dishes.create');
+        $restaurant= Restaurant::where('user_id', '=', Auth::id())->get()[0];
+        return view('admin.dishes.create', compact('restaurant'));
     }
 
     /**
