@@ -52,7 +52,7 @@ class RestaurantController extends Controller
         $newRestaurant = new Restaurant();
         // dd(Auth::user()->email);
         // per identificare che deve andare in quell'id
-        $restaurant = $newRestaurant::all()[$id -1];
+        $restaurant = $newRestaurant::where('id', '=', $id)->get()[0];
         $newTypes = new Type();
         $newRestaurantType = new RestaurantType();
         return view('admin.restaurants.show', compact('restaurant'));

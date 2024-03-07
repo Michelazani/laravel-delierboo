@@ -7,7 +7,7 @@
     <div class="row justify-content-center ">
         <div class="col-7">
             @include('layouts.partials.errors')
-            <form action="{{ route('admin.restaurants.store') }}" method="POST">
+            <form action="{{ route('admin.restaurants.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <h2 class="m-4">Crea il menù del ristorante:</h2>
@@ -43,10 +43,18 @@
 
                 
                 {{--form per mettere le immagini --}}
-                <h4>Carica un'immagine</h4>
+                <div class="mb-3 input-group">
+                    <label for="image_restaurant" class="input-group-text">Upload a post image</label>
+                    <input class="form-control" type="file" name="image_restaurant" id="image_restaurant" value="">
+                </div>
+                <div class="mb-3 input-group">
+                    <img src="" alt="Image preview" class="d-none img-fluid" id="image-preview">
+                </div>
+
+                {{-- <h4>Carica un'immagine</h4>
                 <div class="input-group">
                     <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-                </div>
+                </div> --}}
                 <div class="mb-3 input-group">
                     <button type="submit" class="btn btn-primary m-2">
                         Crea ristorante
