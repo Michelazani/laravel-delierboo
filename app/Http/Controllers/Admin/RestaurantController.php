@@ -24,9 +24,13 @@ class RestaurantController extends Controller
      */
     public function create()
     {
+        $newRestaurant = new Restaurant();
+        $targetRestaurant = $newRestaurant::where('user_id', '=', Auth::id())->get();
+        if(count($targetRestaurant) > 0){
+            return redirect()->route('home');
+        }
         $newTypes = new Type();
         $types = $newTypes::all();
-        $newRestaurant = new Restaurant();
         $restaurants = $newRestaurant::all();
         return view('admin.restaurants.create', compact('types', 'restaurants'));
     }
