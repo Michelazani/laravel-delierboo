@@ -10,7 +10,7 @@
             <form action="{{ route('admin.restaurants.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
-                <h2 class="m-4">Crea il menù del ristorante:</h2>
+                <h2 class="m-4">Crea il ristorante:</h2>
                 <div class="mb-3 input-group">
                     <label for="name_restaurant" class="input-group-text">Nome del ristorante:</label>
                     <input class="form-control" type="text" name="name_restaurant" id="name_restaurant" value="{{ old('name_restaurant') }}">
