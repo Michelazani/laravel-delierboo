@@ -16,7 +16,7 @@ $restaurants = [
             "email_restaurant" => "ristoranteitaliano@gmail.com",
             "address_restaurant" => "Corso Buenos Aires 3 - Milano (MI), 20123 Italia",
             "vat_restaurant" => "IT12345678901",
-            "image_restaurant" => "../resources/public/foto_ristoranti/ristoranteItaliano.png",
+            "image_restaurant" => "../public/storage/foto_ristoranti/ristoranteItaliano.png",
             "type" => "Italiano" , 
 
             //MENU

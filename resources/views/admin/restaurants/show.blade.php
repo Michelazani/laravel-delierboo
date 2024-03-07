@@ -8,8 +8,15 @@
         {{ $restaurant->name_restaurant }}
         </h1>
         <div class="card-image">
-            <img class="w-50" src="{{ Storage::url('restaurant->image_restaurant') }}" alt="img">
+            <img src="{{ asset('storage') . '/' . $restaurant->image_restaurant }}" alt="Restaurant Image">
         </div>
+
+        {{-- @if ( str_starts_with($restaurant->image_restaurant, 'http'))
+        <img src="{{ $restaurant->image_restaurant }}" alt="">
+        @else
+            <img src="{{ asset('storage') . '/' . $restaurant->restaurant_image }}" alt="">
+        @endif --}}
+
         <p>
             Email:{{ Auth::user()->email}}
         </p>

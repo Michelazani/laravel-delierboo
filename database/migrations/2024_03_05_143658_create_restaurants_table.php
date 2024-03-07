@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name_restaurant', 100)->nullable(false);
             $table->string('address_restaurant', 150)->nullable(false);
             $table->string('vat_restaurant', 14)->unique()->nullable(false);
-            $table->string('image_restaurant', 150)->nullable();
+            $table->string('image_restaurant', 200)->nullable();
             $table->timestamps();
         });
     }
