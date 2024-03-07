@@ -12,6 +12,14 @@ class Dish extends Model
     use HasFactory;
     protected $table = 'dishes';
 
+    protected $fillable = [
+        'restaurant_id',
+        'name', 
+        'price',
+        'ingredients',
+        'image_dish'
+    ];
+
     public function orders(){
         // many to many tra dishes e orders
         return $this->belongsToMany(Order::class);

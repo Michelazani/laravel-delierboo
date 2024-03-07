@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Admin\RestaurantController as AdminRestaurantController;
+use App\Http\Controllers\Admin\DishController as AdminDishController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,4 +29,7 @@ Route::middleware('auth')
         Route::post('/restaurants', [AdminRestaurantController::class, 'store'])->name('restaurants.store');
         Route::get('/restaurants/create', [AdminRestaurantController::class, 'create'])->name('restaurants.create');
         Route::get('/restaurants/{restaurant}', [AdminRestaurantController::class, 'show'])->name('restaurants.show');
+        Route::post('/dishes', [AdminDishController::class, 'store'])->name('dishes.store');
+        Route::get('/dishes/create', [AdminDishController::class, 'create'])->name('dishes.create');
+        Route::get('/dishes/{dish}', [AdminDishController::class, 'show'])->name('dishes.show');
     });
