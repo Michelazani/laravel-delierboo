@@ -14,6 +14,7 @@ class Restaurant extends Model
     use HasFactory;
     // fillable per il controller
     protected $fillable = [
+        'user_id',
         'name_restaurant', 
         'address_restaurant',
         'vat_restaurant',

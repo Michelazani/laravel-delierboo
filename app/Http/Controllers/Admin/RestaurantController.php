@@ -4,8 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Restaurant;
+use App\Models\RestaurantType;
 use App\Models\Type;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class RestaurantController extends Controller
 {
@@ -35,6 +37,7 @@ class RestaurantController extends Controller
     public function store(Request $request)
     {
         $newRestaurantData = $request->all();
+        // dd($request->all());
         $newRestaurant = new Restaurant();
         $newRestaurant -> fill($newRestaurantData);
         $newRestaurant->save();
@@ -47,8 +50,11 @@ class RestaurantController extends Controller
     public function show(string $id)
     {
         $newRestaurant = new Restaurant();
+        // dd(Auth::user()->email);
         // per identificare che deve andare in quell'id
         $restaurant = $newRestaurant::all()[$id -1];
+        $newTypes = new Type();
+        $newRestaurantType = new RestaurantType();
         return view('admin.restaurants.show', compact('restaurant'));
     }
 

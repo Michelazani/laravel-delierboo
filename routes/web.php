@@ -27,4 +27,5 @@ Route::middleware('auth')
         Route::get('/restaurants', [AdminDashboardController::class, 'index'])->name('home');
         Route::post('/restaurants', [AdminRestaurantController::class, 'store'])->name('restaurants.store');
         Route::get('/restaurants/create', [AdminRestaurantController::class, 'create'])->name('restaurants.create');
+        Route::get('/restaurants/{restaurant}', [AdminRestaurantController::class, 'show'])->name('restaurants.show');
     });

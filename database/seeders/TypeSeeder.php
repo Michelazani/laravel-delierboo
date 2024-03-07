@@ -14,11 +14,16 @@ class TypeSeeder extends Seeder
     public function run(): void
     {
         $restaurants = config ('db.restaurants');
+        $typecheck = [];
 
         foreach ($restaurants as $type) {
-            $newtype = new Type();
-            $newtype-> name_type = $type['type'];
-            $newtype->save();
+            // se ritorna falso, deve aggiungere in typecheck la chiave
+            if (in_array($type['type'], $typecheck) != true) {
+                array_push($typecheck, $type['type']);
+                $newtype = new Type();
+                $newtype-> name_type = $type['type'];
+                $newtype->save();
+            }
         }
     }
 }

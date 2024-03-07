@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center ">
         <div class="col-7">
             @include('layouts.partials.errors')
             <form action="{{ route('admin.restaurants.store') }}" method="POST">
@@ -23,23 +23,30 @@
                     <label for="vat_restaurant" class="input-group-text">P.IVA:</label>
                     <input class="form-control" type="text" name="vat_restaurant" id="vat_restaurant" value="{{ old('vat_restaurant') }}">
                 </div>
-                {{-- select per il type --}}
-                <div class="mb-3 input-group">
-                    <label for="type" class="input-group-text">Categoria:</label>
-                    <select class="form-select" type="text" name="type" id="type" >
-                        @foreach ($types as $type)
-                            <option value="{{ $type }}"
-                                {{ $type == old('type', $type->type) ? 'selected' : '' }}>
-                                    {{ $type->name_type }}
-                            </option>
+                {{-- checkbox per il type --}}
+                <h4>Scegli il tipo di ristorante:</h4>
+                <div class="mb-3 form-check ">
+                    @foreach ($types as $type)
+                    <input class="form-check-input" type="checkbox" name="some_checkbox" id="some_checkbox" {{ old('some_checkbox') ? 'checked' : '' }}>
+                    <label class="form-check-label" for="some_checkbox">
+                        <option value="{{ $type }}"
+                            {{ $type == old('type', $type->type) ? 'selected' : '' }}>
+                                {{ $type->name_type }}
+                        </option>
                         @endforeach
-                    </select>
+                    </label>
                 </div>
+                <div class="invisible">
+                    <label for="user_id" ></label>
+                    <input name="user_id" value="{{ Auth::id() }}">
+                </div>
+
+                
                 {{--form per mettere le immagini --}}
-                {{-- <div class="mb-3">
-                    <label for="image_restaurant" class="form-label">Immagine:</label>
-                    <input type="text" name="image_restaurant" id="image_restaurant" class="form-control" value="{{ old('image_restaurant', $restaurants->image_restaurant) }}">
-                </div> --}}
+                <h4>Carica un'immagine</h4>
+                <div class="input-group">
+                    <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                </div>
                 <div class="mb-3 input-group">
                     <button type="submit" class="btn btn-primary m-2">
                         Crea ristorante
