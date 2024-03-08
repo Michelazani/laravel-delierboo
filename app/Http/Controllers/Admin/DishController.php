@@ -11,9 +11,10 @@ use Illuminate\Support\Facades\Storage;
 
 class DishController extends Controller
 {
-    public function index()
+    public function index(string $id)
     {
-        //
+        $dishes = Dish::where('restaurant_id', '=' , $id)->get();
+        return view('admin.dishes.index', compact('dishes'));
     }
 
     /**
