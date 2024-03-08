@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Admin\RestaurantController as AdminRestaurantController;
 use App\Http\Controllers\Admin\DishController as AdminDishController;
+use App\Http\Controllers\Admin\MenuController as AdminMenuController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,5 +38,8 @@ Route::middleware('auth')
         Route::get('/restaurants/{restaurant}/dishes', [AdminDishController::class, 'index'])->name('restaurants.dishes.index');
         Route::get('/dishes/{dish}', [AdminDishController::class, 'show'])->name('dishes.show');
         Route::get('/dishes/{dish}/edit', [AdminDishController::class, 'edit'])->name('dishes.edit');
+
+        Route::get('/restaurants', [AdminMenuController::class , 'menuRedirect'])->name('menuRedirect');
+
         
     });
