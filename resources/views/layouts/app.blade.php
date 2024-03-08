@@ -52,12 +52,12 @@
                                 
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                Project
+                                Menù
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Create new project
+                            <a class="nav-link" href="{{ route('admin.restaurants.create') }}">
+                                Create new restaurant
                             </a>
                         </li>
                             <li class="nav-item dropdown">
@@ -67,8 +67,8 @@
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                    onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
