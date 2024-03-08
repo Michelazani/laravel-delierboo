@@ -52,14 +52,14 @@
                                 
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('admin.restaurantRedirect') }}">
-                                Menù
+                                Ristorante
                             </a>
-                        </li>
-                        {{-- <li class="nav-item">
-                            <a class="nav-link" href="{{ route('admin.dishes.create') }}">
+                        </li> 
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('admin.menuRedirect') }}">
                                 Visualizza Menù
                             </a>
-                        </li> --}}
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('admin.dishes.create') }}">
                                 Crea un nuovo piatto

@@ -62,7 +62,7 @@ class RestaurantController extends Controller
     public function show(string $id)
     {
         $newRestaurant = new Restaurant();
-        // dd(Auth::user()->email);
+        // dd($id);
         // per identificare che deve andare in quell'id
         $restaurant = $newRestaurant::where('id', '=', $id)->get()[0];
         $newTypes = new Type();

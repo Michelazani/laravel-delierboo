@@ -30,6 +30,8 @@ Route::middleware('auth')
         Route::get('/restaurants', [AdminDashboardController::class, 'index'])->name('home');
         Route::post('/restaurants', [AdminRestaurantController::class, 'store'])->name('restaurants.store');
         Route::get('/restaurants/create', [AdminRestaurantController::class, 'create'])->name('restaurants.create');
+        Route::get('/restaurants/restaurant-redirect', [AdminRedirectController::class , 'restaurantRedirect'])->name('restaurantRedirect');
+        Route::get('/restaurants/menu-redirect', [AdminRedirectController::class , 'menuRedirect'])->name('menuRedirect');
         Route::get('/restaurants/{restaurant}', [AdminRestaurantController::class, 'show'])->name('restaurants.show');
         // rotte per i piatti
         Route::post('/dishes', [AdminDishController::class, 'store'])->name('dishes.store');
@@ -39,5 +41,5 @@ Route::middleware('auth')
         Route::get('/dishes/{dish}', [AdminDishController::class, 'show'])->name('dishes.show');
         Route::get('/dishes/{dish}/edit', [AdminDishController::class, 'edit'])->name('dishes.edit');
 
-        Route::get('/restaurants', [AdminRedirectController::class , 'restaurantRedirect'])->name('restaurantRedirect');
+
     });
