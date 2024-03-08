@@ -20,6 +20,7 @@ class RestaurantSeeder extends Seeder
             $newrestaurant-> user_id=$restaurant['id'];
             $newrestaurant-> name_restaurant=$restaurant['name_restaurant'];
             $newrestaurant-> address_restaurant=$restaurant['address_restaurant'];
+            $newrestaurant-> image_restaurant=$restaurant['image_restaurant'];
             $newrestaurant-> vat_restaurant=$restaurant['vat_restaurant'];
             $newrestaurant->save();
         }

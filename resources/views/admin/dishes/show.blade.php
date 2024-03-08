@@ -8,7 +8,7 @@
         {{ $dish->name }}
     </h1>
     <div class="card-image">
-        <img class="img-thumbnail " src="{{ asset('storage') . '/' . $dish->img_dish }}" alt="Dish Image">
+        <img class="img-thumbnail" src="{{ asset('storage') . '/' . $dish->img_dish }}" alt="Dish Image">
     </div>
 
     <p>

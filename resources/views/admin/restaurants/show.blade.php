@@ -8,7 +8,7 @@
         {{ $restaurant->name_restaurant }}
         </h1>
         <div class="card-image">
-            <img src="{{ asset('storage') . '/' . $restaurant->image_restaurant }}" alt="Restaurant Image">
+            <img class="img-thumbnail" src="{{ asset('storage') . '/' . $restaurant->image_restaurant }}" alt="Restaurant Image">
         </div>
 
         {{-- @if ( str_starts_with($restaurant->image_restaurant, 'http'))
