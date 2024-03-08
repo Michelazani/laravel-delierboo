@@ -44,7 +44,7 @@
                 </fieldset>
                 
                 <div class="mb-3 input-group">
-                    <input class="form-control" type="file" name="image_restaurant" id="image_restaurant" value="">
+                    <input class="form-control" type="file" name="img_dish" id="img_dish" value="">
                 </div>
                 <div class="invisible">
                     <label for="restaurant_id" ></label>
@@ -52,7 +52,7 @@
                 </div>
 
                 
-                {{--form per mettere le immagini --}}
+                <!-- {{--form per mettere le immagini --}}
                 {{-- <div class="mb-3 input-group">
                     <input class="form-control" type="file" name="image_restaurant" id="image_restaurant" value="">
                 </div> --}}
@@ -60,7 +60,7 @@
                 {{-- preview img --}}
                 {{-- <div class="mb-3 input-group">
                     <img src="" alt="Image preview" class="d-none img-fluid" id="image-preview">
-                </div>  --}}
+                </div>  --}} -->
                 <div class="mb-3 input-group">
                     <button type="submit" class="btn btn-primary m-2">
                         Aggiungi piatto

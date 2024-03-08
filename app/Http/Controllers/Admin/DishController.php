@@ -7,6 +7,7 @@ use App\Models\Dish;
 use App\Models\Restaurant;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class DishController extends Controller
 {
@@ -31,7 +32,8 @@ class DishController extends Controller
     {
         // $newRestaurantData = $request->all();
         $newDishData = $request->all();
-
+        $imageSrc = Storage::put('uploads/dishes', $newDishData['img_dish']);
+        $newDishData['img_dish'] = $imageSrc;
         //dd($request->all());
         $newDish = new Dish();
         $newDish -> fill($newDishData);

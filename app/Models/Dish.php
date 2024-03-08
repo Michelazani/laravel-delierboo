@@ -18,7 +18,7 @@ class Dish extends Model
         'price',
         'available',
         'ingredients',
-        'image_dish'
+        'img_dish'
     ];
 
     public function orders(){
