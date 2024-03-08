@@ -12,17 +12,17 @@
 
                 <h2 class="m-4">Crea il piatto:</h2>
                 <div class="mb-3 input-group">
-                    <label for="name" class="input-group-text">Nome del piatto:</label>
-                    <input class="form-control" type="text" name="name" id="name" value="{{ old('name') }}">
+                    <label for="name" class="input-group-text w-25">Nome del piatto:</label>
+                    <input class="form-control" type="text" name="name" id="name" value="{{ old('name') }}" required>
                 </div>
                 <div class="mb-3 input-group">
-                    <label for="price" class="input-group-text">Prezzo:</label>
-                    <input class="form-control" type="text" name="price" id="price" value="{{ old('price') }}">
+                    <label for="price" class="input-group-text w-25">Prezzo:</label>
+                    <input class="form-control" type="text" name="price" id="price" value="{{ old('price') }}" required >
                 </div>
                 
                 <div class="mb-3 input-group">
                     <label for="ingredients" class="input-group-text">Ingredienti:</label>
-                    <textarea class="form-control"  name="ingredients" id="ingredients" cols="20" rows="5">{{ old('ingredients')  }}</textarea>
+                    <textarea class="form-control"  name="ingredients" id="ingredients" cols="20" rows="5" required>{{ old('ingredients')  }}</textarea>
                 </div>
                 
                 <fieldset class="row mb-3">
