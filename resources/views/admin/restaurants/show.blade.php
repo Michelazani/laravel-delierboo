@@ -22,7 +22,7 @@
     </p>
     <p>
         {{-- mettere il tipo --}}
-        Type: {{ $restaurant-> type}}
+        Type: {{ $restaurant-> name_type}}
     </p> 
     <p class="">
         Indirizzo: {{ $restaurant->address_restaurant }}

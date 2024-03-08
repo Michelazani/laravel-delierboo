@@ -61,12 +61,10 @@ class RestaurantController extends Controller
      */
     public function show(string $id)
     {
-        $newRestaurant = new Restaurant();
-        // dd($id);
-        // per identificare che deve andare in quell'id
-        $restaurant = $newRestaurant::where('id', '=', $id)->get()[0];
-        $newTypes = new Type();
-        $newRestaurantType = new RestaurantType();
+        // il primo richiama la tabella, il secondo richiama la colonna type = id del ristorante. ha unito restaurant con tabella ponte restaurantType->join(sta joinando il type con il risultato della join di prima-> join nella join)  
+        // This will join the restaurants table with the restaurant_type table, and then join the restaurant_type table with the types table, resulting in an inner join on the pivot table.
+        $restaurant = Restaurant::join('restaurant_type', 'restaurants.id', '=', 'restaurant_type.restaurant_id')->join('types', 'types.id', '=', 'restaurant_type.type_id')->where('restaurant_id', '=', $id)->get()[0];
+        // dd($restaurants['name_type']);
         return view('admin.restaurants.show', compact('restaurant'));
     }
 
