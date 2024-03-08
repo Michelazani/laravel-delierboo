@@ -30,7 +30,7 @@ Route::middleware('auth')
         Route::post('/restaurants', [AdminRestaurantController::class, 'store'])->name('restaurants.store');
         Route::get('/restaurants/create', [AdminRestaurantController::class, 'create'])->name('restaurants.create');
         Route::get('/restaurants/{restaurant}', [AdminRestaurantController::class, 'show'])->name('restaurants.show');
-        // rotte oer i piatti
+        // rotte per i piatti
         Route::post('/dishes', [AdminDishController::class, 'store'])->name('dishes.store');
         Route::put('/dishes', [AdminDishController::class, 'update'])->name('dishes.update');
         Route::get('/dishes/create', [AdminDishController::class, 'create'])->name('dishes.create');
