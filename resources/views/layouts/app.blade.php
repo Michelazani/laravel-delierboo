@@ -51,10 +51,15 @@
                         @else
                                 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('admin.menuRedirect') }}">
+                            <a class="nav-link" href="{{ route('admin.restaurantRedirect') }}">
                                 Menù
                             </a>
                         </li>
+                        {{-- <li class="nav-item">
+                            <a class="nav-link" href="{{ route('admin.dishes.create') }}">
+                                Visualizza Menù
+                            </a>
+                        </li> --}}
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('admin.dishes.create') }}">
                                 Crea un nuovo piatto
