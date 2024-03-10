@@ -11,28 +11,28 @@
                 @csrf
                 @method('PUT')
 
-                <h2 class="m-4">Crea il piatto:</h2>
+                <h2 class="m-4">Modifica il piatto:</h2>
                 <div class="mb-3 input-group">
                     <label for="name" class="input-group-text">Nome del piatto:</label>
-                    <input class="form-control" type="text" name="name" id="name" value="{{ $dish['name'] }}" required>
+                    <input class="form-control" type="text" name="name" id="name" value="{{ $dish['name'] }}" >
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text">Prezzo:</span>
-                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" name="price" id="price" value="{{ $dish['price'] }}" required>
+                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" name="price" id="price" value="{{ $dish['price'] }}" placeholder="Es. 10.99">
                     <span class="input-group-text">€</span>
                 </div>
                 
                 <div class="mb-3 input-group">
                     <label for="ingredients" class="input-group-text">Ingredienti:</label>
-                    <textarea class="form-control"  name="ingredients" id="ingredients" cols="20" rows="5" required>{{ $dish['ingredients']  }}</textarea>
+                    <textarea class="form-control"  name="ingredients" id="ingredients" cols="20" rows="5" >{{ $dish['ingredients']  }}</textarea>
                 </div>
                 
                 <fieldset class="row mb-3">
-                    <legend class="col-form-label col-sm-2 pt-0" required>Disponibile:</legend>
+                    <legend class="col-form-label col-sm-2 pt-0" >Disponibile:</legend>
                     <div class="col-sm-10">
                     @if ($dish['available'])
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="available" id="available1" value="{{1}}" required checked>
+                            <input class="form-check-input" type="radio" name="available" id="available1" value="{{1}}"  checked>
                             <label class="form-check-label" for="available1">
                             Si
                             </label>
@@ -45,7 +45,7 @@
                         </div>
                     @else
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="available" id="available1" value="{{1}}" required >
+                            <input class="form-check-input" type="radio" name="available" id="available1" value="{{1}}"  >
                             <label class="form-check-label" for="available1">
                             Si
                             </label>

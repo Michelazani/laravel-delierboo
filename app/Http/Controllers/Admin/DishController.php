@@ -31,6 +31,13 @@ class DishController extends Controller
      */
     public function store(Request $request)
     {
+        $newDishData = $request->validate([
+            'name' => ['required', 'min:4', 'max:40'],
+            'price' => ['required', 'decimal:2,10', 'between:0,99999999.99'],
+            'ingredients' => ['required', 'min:3', 'max:3000'],
+            'available' => ['required'],
+        ]);
+
         // $newRestaurantData = $request->all();
         $newDishData = $request->all();
         $imageSrc = Storage::put('uploads/dishes', $newDishData['img_dish']);
@@ -38,14 +45,6 @@ class DishController extends Controller
         //dd($request->all());
         $newDish = new Dish();
         $newDish -> fill($newDishData);
-
-        // $imageSrc = Storage::put('uploads/restaurants', $newRestaurantData['image_restaurant']);
-        // $newRestaurantData['image_restaurant'] = $imageSrc;
-
-
-        //dopo il put metto dove voglio che venga salvato il file , e cosa voglio salvare
-        // $imageSrc = Storage::disk('uploads/restaurants ', $newRestaurantData['image_restaurant']);
-        // $newRestaurantData['image_restaurant'] = $imageSrc;
         $newDish->save();
         return redirect()->route('admin.dishes.show', $newDish->id);
         
@@ -78,6 +77,12 @@ class DishController extends Controller
      */
     public function update(Request $request)
     {
+        $data = $request->validate([
+            'name' => ['required', 'min:4', 'max:40'],
+            'price' => ['required', 'decimal:2,10', 'between:0,99999999.99'],
+            'ingredients' => ['required', 'min:3', 'max:3000'],
+            'available' => ['required'],
+        ]);
         $data=$request->all();
         $dish= Dish::find($data['id']);
         $dish->update($data);

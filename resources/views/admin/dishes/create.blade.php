@@ -13,26 +13,26 @@
                 <h2 class="m-4">Crea il piatto:</h2>
                 <div class="mb-3 input-group">
                     <label for="name" class="input-group-text">Nome:</label>
-                    <input class="form-control" type="text" name="name" id="name" value="{{ old('name') }}" required>
+                    <input class="form-control" type="text" name="name" id="name" value="{{ old('name') }}" >
                 </div>
 
                 <div class="input-group mb-3">
                     <span class="input-group-text">Prezzo:</span>
-                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" name="price" id="price" required>
+                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" name="price" id="price" placeholder="Es. 10.99">
                     <span class="input-group-text">€</span>
 
                 </div>
                 
                 <div class="mb-3 input-group">
                     <label for="ingredients" class="input-group-text">Ingredienti:</label>
-                    <textarea class="form-control"  name="ingredients" id="ingredients" cols="20" rows="5" required>{{ old('ingredients')  }}</textarea>
+                    <textarea class="form-control"  name="ingredients" id="ingredients" cols="20" rows="5" >{{ old('ingredients')  }}</textarea>
                 </div>
                 
                 <fieldset class="row mb-3">
                     <legend class="col-form-label col-sm-2 pt-0">Disponibile:</legend>
                     <div class="col-sm-10">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="available" id="available1" value="{{1}}" required>
+                        <input class="form-check-input" type="radio" name="available" id="available1" value="{{1}}" >
                         <label class="form-check-label" for="available1">
                         Si
                         </label>
