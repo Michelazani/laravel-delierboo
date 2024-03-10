@@ -14,24 +14,25 @@
                 <h2 class="m-4">Crea il piatto:</h2>
                 <div class="mb-3 input-group">
                     <label for="name" class="input-group-text">Nome del piatto:</label>
-                    <input class="form-control" type="text" name="name" id="name" value="{{ $dish['name'] }}">
+                    <input class="form-control" type="text" name="name" id="name" value="{{ $dish['name'] }}" required>
                 </div>
-                <div class="mb-3 input-group">
-                    <label for="price" class="input-group-text">Prezzo:</label>
-                    <input class="form-control" type="text" name="price" id="price" value="{{ $dish['price'] }}">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Prezzo:</span>
+                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" name="price" id="price" value="{{ $dish['price'] }}" required>
+                    <span class="input-group-text">€</span>
                 </div>
                 
                 <div class="mb-3 input-group">
                     <label for="ingredients" class="input-group-text">Ingredienti:</label>
-                    <textarea class="form-control"  name="ingredients" id="ingredients" cols="20" rows="5">{{ $dish['ingredients']  }}</textarea>
+                    <textarea class="form-control"  name="ingredients" id="ingredients" cols="20" rows="5" required>{{ $dish['ingredients']  }}</textarea>
                 </div>
                 
                 <fieldset class="row mb-3">
-                    <legend class="col-form-label col-sm-2 pt-0">Disponibile:</legend>
+                    <legend class="col-form-label col-sm-2 pt-0" required>Disponibile:</legend>
                     <div class="col-sm-10">
                     @if ($dish['available'])
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="available" id="available1" value="{{1}}" checked>
+                            <input class="form-check-input" type="radio" name="available" id="available1" value="{{1}}" required checked>
                             <label class="form-check-label" for="available1">
                             Si
                             </label>
@@ -44,7 +45,7 @@
                         </div>
                     @else
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="available" id="available1" value="{{1}}" >
+                            <input class="form-check-input" type="radio" name="available" id="available1" value="{{1}}" required >
                             <label class="form-check-label" for="available1">
                             Si
                             </label>
@@ -67,16 +68,7 @@
                     <label for="id" ></label>
                     <input name="id" value="{{ $dish['id'] }}">
                 </div>
-                
-                {{--form per mettere le immagini --}}
-                {{-- <div class="mb-3 input-group">
-                    <input class="form-control" type="file" name="image_restaurant" id="image_restaurant" value="">
-                </div> --}}
 
-                {{-- preview img --}}
-                {{-- <div class="mb-3 input-group">
-                    <img src="" alt="Image preview" class="d-none img-fluid" id="image-preview">
-                </div>  --}}
                 <div class="mb-3 input-group">
                     <button type="submit" class="btn btn-primary m-2">
                         Modifica piatto
@@ -85,7 +77,6 @@
                         Reset
                     </button>
                 </div>
-
             </form>
         </div>
     </div>

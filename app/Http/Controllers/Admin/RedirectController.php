@@ -27,8 +27,4 @@ class RedirectController extends Controller
         return redirect()->route('admin.restaurants.dishes.index', $restaurant->id);
     }
 
-    public function showImg()
-    {
-        return view("admin.showimg");
-    }
 }

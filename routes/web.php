@@ -41,8 +41,4 @@ Route::middleware('auth')
         Route::get('/dishes/{dish}', [AdminDishController::class, 'show'])->name('dishes.show');
         Route::get('/dishes/{dish}/edit', [AdminDishController::class, 'edit'])->name('dishes.edit');
         
-        
-        Route::get('/showimg', [AdminRedirectController::class, 'showImg'])->name('showimg');
-
-
     });

@@ -12,12 +12,15 @@
 
                 <h2 class="m-4">Crea il piatto:</h2>
                 <div class="mb-3 input-group">
-                    <label for="name" class="input-group-text w-25">Nome del piatto:</label>
+                    <label for="name" class="input-group-text">Nome:</label>
                     <input class="form-control" type="text" name="name" id="name" value="{{ old('name') }}" required>
                 </div>
-                <div class="mb-3 input-group">
-                    <label for="price" class="input-group-text w-25">Prezzo:</label>
-                    <input class="form-control" type="text" name="price" id="price" value="{{ old('price') }}" required >
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Prezzo:</span>
+                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" name="price" id="price" required>
+                    <span class="input-group-text">€</span>
+
                 </div>
                 
                 <div class="mb-3 input-group">
@@ -29,13 +32,13 @@
                     <legend class="col-form-label col-sm-2 pt-0">Disponibile:</legend>
                     <div class="col-sm-10">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="available" id="available1" value="{{true}}">
+                        <input class="form-check-input" type="radio" name="available" id="available1" value="{{1}}" required>
                         <label class="form-check-label" for="available1">
                         Si
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="available" id="available2" value="{{false}}">
+                        <input class="form-check-input" type="radio" name="available" id="available2" value="{{0}}">
                         <label class="form-check-label" for="available2">
                         No
                         </label>
@@ -51,16 +54,6 @@
                     <input name="restaurant_id" value="{{ $restaurant['id'] }}">
                 </div>
 
-                
-                <!-- {{--form per mettere le immagini --}}
-                {{-- <div class="mb-3 input-group">
-                    <input class="form-control" type="file" name="image_restaurant" id="image_restaurant" value="">
-                </div> --}}
-
-                {{-- preview img --}}
-                {{-- <div class="mb-3 input-group">
-                    <img src="" alt="Image preview" class="d-none img-fluid" id="image-preview">
-                </div>  --}} -->
                 <div class="mb-3 input-group">
                     <button type="submit" class="btn btn-primary m-2">
                         Aggiungi piatto
