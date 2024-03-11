@@ -53,7 +53,7 @@ class RestaurantController extends Controller
         $newRestaurantData = $request->all();
         // dd($request->all());
         $newRestaurant = new Restaurant();
-        $imageSrc = Storage::put('uploads/restaurants', $newRestaurantData['image_restaurant']);
+        $imageSrc = Storage::put('uploads/restaurants/', $newRestaurantData['image_restaurant']);
         $newRestaurantData['image_restaurant'] = $imageSrc;
         $newRestaurant -> fill($newRestaurantData);
         $newRestaurant->save();
