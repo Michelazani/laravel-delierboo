@@ -19,8 +19,8 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => [env('ALLOWED_APP_URL', '')],
-    
+    'allowed_origins' => [env('ALLOWED_APP_URL', '*')],
+
     'allowed_origins_patterns' => [],
 
     'allowed_headers' => ['*'],
