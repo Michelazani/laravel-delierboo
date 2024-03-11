@@ -25,7 +25,7 @@
                     </a>
                     
                     <!-- Pulsante di Cancellazione con icona -->
-                    <button form="delete-form-{{ $dish->id }}" class="btn btn-danger" style="width: 100px;">
+                    <button form="delete-form-{{ $dish->id }}" class="btn btn-danger" style="width: 100px;" onclick="return confirm('Sei sicuro di voler eliminare questo piatto?')">
                         <i class="fas fa-trash"></i> Elimina
                     </button>
                 
