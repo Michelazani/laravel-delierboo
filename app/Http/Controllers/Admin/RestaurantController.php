@@ -53,7 +53,7 @@ class RestaurantController extends Controller
         $newRestaurantData = $request->all();
         // dd($request->all());
         $newRestaurant = new Restaurant();
-        $imageSrc = Storage::put('uploads/restaurants/', $newRestaurantData['image_restaurant']);
+        $imageSrc = Storage::put('uploads/restaurants/'. str_replace(' ','-', $newRestaurantData['name_restaurant']).'/id-'. Auth::id(), $newRestaurantData['image_restaurant']);
         $newRestaurantData['image_restaurant'] = $imageSrc;
         $newRestaurant -> fill($newRestaurantData);
         $newRestaurant->save();
@@ -70,7 +70,9 @@ class RestaurantController extends Controller
     {
         // il primo richiama la tabella, il secondo richiama la colonna type = id del ristorante. ha unito restaurant con tabella ponte restaurantType->join(sta joinando il type con il risultato della join di prima-> join nella join)  
         // This will join the restaurants table with the restaurant_type table, and then join the restaurant_type table with the types table, resulting in an inner join on the pivot table.
-        $restaurant = Restaurant::with('types')->where('id', $id)->firstOrFail();
+        $restaurant= Restaurant::where('user_id', '=', Auth::id())->get()[0];
+        $restaurantType= RestaurantType::with();
+        dd($restaurant);
         // dd($restaurants['name_type']);
         return view('admin.restaurants.show', compact('restaurant'));
         //with('types'): carica anticipatamente la relazione types per il ristorante. Questo riduce il numero di query eseguite sul database e migliora le prestazioni.
