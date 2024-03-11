@@ -92,8 +92,16 @@ class DishController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
-        //
+        $dish = Dish::findOrFail($id);
+        $restaurantId = $dish->restaurant_id; // Assumi che tu abbia una colonna `restaurant_id` nel tuo model Dish
+        $dish->delete();
+        return redirect()->route('admin.restaurants.dishes.index', ['restaurant' => $restaurantId])
+                         ->with('success', 'Piatto eliminato con successo.');
     }
+    
+    
+    
+    
 }
