@@ -10,6 +10,9 @@ class DishController extends Controller
 {
     public function index(){
         $dishes= Dish::all();
-        return response()->json($dishes);
+        return response()->json([
+            'success' => true,
+            'results' => $dishes
+        ]);
     }
 }
