@@ -13,23 +13,23 @@
                 <h2 class="m-4">Crea il ristorante:</h2>
                 <div class="mb-3 input-group">
                     <label for="name_restaurant" class="input-group-text">Nome del ristorante:</label>
-                    <input class="form-control" type="text" name="name_restaurant" id="name_restaurant" value="{{ old('name_restaurant') }}" required>
+                    <input class="form-control" type="text" name="name_restaurant" id="name_restaurant" value="{{ old('name_restaurant') }}" >
                 </div>
                 <div class="mb-3 input-group">
                     <label for="address_restaurant" class="input-group-text">Indirizzo:</label>
-                    <input class="form-control" type="text" name="address_restaurant" id="address_restaurant" value="{{ old('address_restaurant') }}" required>
+                    <input class="form-control" type="text" name="address_restaurant" id="address_restaurant" value="{{ old('address_restaurant') }}" >
                 </div>
                 <div class="mb-3 input-group">
                     <label for="vat_restaurant" class="input-group-text">P.IVA:</label>
-                    <input class="form-control" type="text" name="vat_restaurant" id="vat_restaurant" value="{{ old('vat_restaurant') }}" required>
+                    <input class="form-control" type="text" name="vat_restaurant" id="vat_restaurant" value="{{ old('vat_restaurant') }}" >
                 </div>
                 {{-- checkbox per il type --}}
                 <h4>Scegli il tipo di ristorante:</h4>
                 <div class="mb-3 form-check ">
                     @foreach ($types as $type)
-                    <input class="form-check-input" type="checkbox" name="some_checkbox" id="some_checkbox" {{ old('some_checkbox') ? 'checked' : '' }} required>
-                    <label class="form-check-label" for="some_checkbox">
-                        <option value="{{ $type }}"
+                    <input class="form-check-input" type="checkbox" name="type" id="type" {{ old('type') ? 'checked' : '' }} >
+                    <label class="form-check-label" for="type">
+                        <option value="{{ $type->name_type }}"
                             {{ $type == old('type', $type->type) ? 'selected' : '' }}>
                                 {{ $type->name_type }}
                         </option>

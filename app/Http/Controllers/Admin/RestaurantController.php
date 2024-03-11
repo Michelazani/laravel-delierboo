@@ -45,6 +45,11 @@ class RestaurantController extends Controller
      */
     public function store(Request $request)
     {
+        $newRestaurantData = $request->validate([
+            'name_restaurant' => ['required', 'string', 'min:1', 'max:100'],
+            'address_restaurant' => ['required', 'string','min:7', 'max:150'],
+            'vat_restaurant' => ['required','string', 'min:13', 'max:13'],
+        ]);
         $newRestaurantData = $request->all();
         // dd($request->all());
         $newRestaurant = new Restaurant();
