@@ -27,10 +27,10 @@ class Restaurant extends Model
         // one to one tra user e restaurant
         return $this->belongsTo(User::class);
     }
-
-    public function types(){
-        // many to many tra types e restaurant
-        return $this->belongsToMany(Type::class);
+//L'approccio corretto non richiede di eseguire manualmente le join tra tabelle, ma di sfruttare le relazioni Eloquent. Per fare questo, assicurati che il tuo model Restaurant abbia una relazione types definita come segue:
+    public function types()
+    {
+        return $this->belongsToMany(Type::class, 'restaurant_type', 'restaurant_id', 'type_id');
     }
 
     public function dishes(){

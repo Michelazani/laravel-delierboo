@@ -64,13 +64,18 @@ class RestaurantController extends Controller
     /**
      * Display the specified resource.
      */
+    //semplificare il metodo show per utilizzare questa relazione anziché fare join manualmente:
+        
     public function show(string $id)
     {
         // il primo richiama la tabella, il secondo richiama la colonna type = id del ristorante. ha unito restaurant con tabella ponte restaurantType->join(sta joinando il type con il risultato della join di prima-> join nella join)  
         // This will join the restaurants table with the restaurant_type table, and then join the restaurant_type table with the types table, resulting in an inner join on the pivot table.
-        $restaurant = Restaurant::join('restaurant_type', 'restaurants.id', '=', 'restaurant_type.restaurant_id')->join('types', 'types.id', '=', 'restaurant_type.type_id')->where('restaurant_id', '=', $id)->get()[0];
+        $restaurant = Restaurant::with('types')->where('id', $id)->firstOrFail();
         // dd($restaurants['name_type']);
         return view('admin.restaurants.show', compact('restaurant'));
+        //with('types'): carica anticipatamente la relazione types per il ristorante. Questo riduce il numero di query eseguite sul database e migliora le prestazioni.
+        //where('id', $id): filtra il ristorante per l'ID fornito.
+        //firstOrFail(): recupera il primo risultato della query. Se nessun risultato viene trovato, Laravel lancerà automaticamente un'eccezione ModelNotFoundException, che può essere catturata per mostrare una pagina 404.
     }
 
     /**
