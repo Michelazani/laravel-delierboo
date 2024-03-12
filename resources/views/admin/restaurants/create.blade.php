@@ -27,9 +27,9 @@
                 <h4>Scegli il tipo di ristorante <span style="color: red">*</span>:</h4>
                 <div class="mb-3 form-check ">
                     @foreach ($types as $type)
-                    <input class="form-check-input" type="checkbox" name="type" id="type" {{ old('type') ? 'checked' : '' }} >
+                    <input class="form-check-input" type="checkbox" name="type[]" id="type" {{ old('type') ? 'checked' : '' }} value="{{ $type->id }}">
                     <label class="form-check-label" for="type">
-                        <option value="{{ $type->name_type }}"
+                        <option 
                             {{ $type == old('type', $type->type) ? 'selected' : '' }}>
                                 {{ $type->name_type }}
                         </option>

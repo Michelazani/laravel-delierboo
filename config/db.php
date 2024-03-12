@@ -75,7 +75,7 @@ $restaurants = [
             "address_restaurant" => "Via Roberto Sarfatti - Milano (MI), 20123 Italia",
             "vat_restaurant" => "IT98765432109",
             "image_restaurant" => "uploads/restaurants/Pizzeria-Napoli/id-3/logo_pizzeria-napoli.png",
-            "type" => "Pizzeria, Italiano" , 
+            "type" => "Pizzeria" , 
             "dishes" => [
                 ["name" => "Margherita", "price" => 10.99, "ingredients" => "pomodoro, mozzarella, basilico","available" => true,"img_dish" => "uploads/dishes/Pizzeria-Napoli/id-3/napoli-margherita.png",],
                 ["name" => "Quattro Formaggi", "price" => 12.99, "ingredients" => "mozzarella, gorgonzola, parmigiano, ricotta","available" => true,"img_dish" => "uploads/dishes/Pizzeria-Napoli/id-3/napoli-4formaggi.png",],

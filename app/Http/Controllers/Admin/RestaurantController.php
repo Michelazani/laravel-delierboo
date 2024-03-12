@@ -51,7 +51,6 @@ class RestaurantController extends Controller
             'vat_restaurant' => ['required','string', 'min:13', 'max:13'],
         ]);
         $newRestaurantData = $request->all();
-        // dd($request->all());
         $newRestaurant = new Restaurant();
         if(array_key_exists('image_restaurant', $newRestaurantData)){
             $imageSrc = Storage::put('uploads/restaurants/'. str_replace(' ','-', $newRestaurantData['name_restaurant']).'/id-'. Auth::id(), $newRestaurantData['image_restaurant']);
