@@ -10,19 +10,15 @@
     <div class="card-image mt-3">
         <img class="img-fluid rounded" src="{{ asset('storage') . '/' . $restaurant->image_restaurant }}" alt="Restaurant Image">
     </div>
-
-    {{-- @if ( str_starts_with($restaurant->image_restaurant, 'http'))
-            <img src="{{ $restaurant->image_restaurant }}" alt="">
-        @else
-            <img src="{{ asset('storage') . '/' . $restaurant->restaurant_image }}" alt="">
-        @endif --}}
-
     <p class="mt-3">
         Email: {{ Auth::user()->email}}
     </p>
     <p>
+        Type: 
         {{-- mettere il tipo --}}
-        Type: {{ $restaurant-> name_type}}
+        @foreach ($types as $type )
+        {{ $type-> name_type}}
+        @endforeach
     </p> 
     <p class="">
         Indirizzo: {{ $restaurant->address_restaurant }}

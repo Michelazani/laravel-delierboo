@@ -40,7 +40,6 @@
                     <label for="user_id" ></label>
                     <input name="user_id" value="{{ Auth::id() }}">
                 </div>
-
                 
                 {{--form per mettere le immagini --}}
                 <div class="mb-3 input-group">
