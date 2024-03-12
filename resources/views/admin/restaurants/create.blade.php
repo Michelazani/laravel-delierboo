@@ -10,21 +10,21 @@
             <form action="{{ route('admin.restaurants.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
-                <h2 class="m-4">Crea il ristorante:</h2>
+                <h2 class="m-4">Crea il ristorante :</h2>
                 <div class="mb-3 input-group">
-                    <label for="name_restaurant" class="input-group-text">Nome del ristorante:</label>
+                    <label for="name_restaurant" class="input-group-text">Nome del ristorante <span style="color: red"> * </span> : </label>
                     <input class="form-control" type="text" name="name_restaurant" id="name_restaurant" value="{{ old('name_restaurant') }}" >
                 </div>
                 <div class="mb-3 input-group">
-                    <label for="address_restaurant" class="input-group-text">Indirizzo:</label>
+                    <label for="address_restaurant" class="input-group-text">Indirizzo <span style="color: red">*</span>:</label>
                     <input class="form-control" type="text" name="address_restaurant" id="address_restaurant" value="{{ old('address_restaurant') }}" >
                 </div>
                 <div class="mb-3 input-group">
-                    <label for="vat_restaurant" class="input-group-text">P.IVA:</label>
+                    <label for="vat_restaurant" class="input-group-text">P.IVA <span style="color: red">*</span>:</label>
                     <input class="form-control" type="text" name="vat_restaurant" id="vat_restaurant" value="{{ old('vat_restaurant') }}" >
                 </div>
                 {{-- checkbox per il type --}}
-                <h4>Scegli il tipo di ristorante:</h4>
+                <h4>Scegli il tipo di ristorante <span style="color: red">*</span>:</h4>
                 <div class="mb-3 form-check ">
                     @foreach ($types as $type)
                     <input class="form-check-input" type="checkbox" name="type" id="type" {{ old('type') ? 'checked' : '' }} >

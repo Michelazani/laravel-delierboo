@@ -40,7 +40,13 @@ class DishController extends Controller
 
         // $newRestaurantData = $request->all();
         $newDishData = $request->all();
-        $imageSrc = Storage::put('uploads/dishes', $newDishData['img_dish']);
+
+        if(array_key_exists('img_dish', $newDishData)){
+            $imageSrc = Storage::put('uploads/dishes', $newDishData['img_dish']);
+        }
+        else{
+            $imageSrc = 'uploads/dishes/default-img/dish_default.png';
+        }
         $newDishData['img_dish'] = $imageSrc;
         //dd($request->all());
         $newDish = new Dish();
