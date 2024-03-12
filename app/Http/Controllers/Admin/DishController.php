@@ -67,12 +67,13 @@ class DishController extends Controller
      */
     public function show(string $id)
     {
-        $newDish = new Dish();
-        // dd(Auth::user()->email);
-        // per identificare che deve andare in quell'id
-        $dish = $newDish::where('id', '=', $id)->get()[0];
-
-        return view('admin.dishes.show', compact('dish'));
+        $restaurant= Restaurant::where('user_id', '=', Auth::id())->get()[0];
+        $dish= Dish::where('restaurant_id', '=', $restaurant->id)->find($id);
+        if ($dish!=null && $dish->id==$id){
+            return view('admin.dishes.show', compact('dish'));
+        } else{
+            return redirect()->route('admin.restaurants.dishes.index',$restaurant->id );
+        }
     }
 
     /**
@@ -80,8 +81,14 @@ class DishController extends Controller
      */
     public function edit(string $id)
     {
-        $dish = Dish::findOrFail($id);
-        return view('admin.dishes.edit', compact('dish'));
+        $restaurant= Restaurant::where('user_id', '=', Auth::id())->get()[0];
+        $dish= Dish::where('restaurant_id', '=', $restaurant->id)->find($id);
+        if ($dish!=null && $dish->id==$id) {
+            return view('admin.dishes.edit', compact('dish'));
+        }
+        else{
+            return redirect()->route('admin.restaurants.dishes.index',$restaurant->id );
+        }
     }
 
     /**
@@ -112,8 +119,4 @@ class DishController extends Controller
         return redirect()->route('admin.restaurants.dishes.index', ['restaurant' => $restaurantId])
                          ->with('success', 'Piatto eliminato con successo.');
     }
-    
-    
-    
-    
 }
