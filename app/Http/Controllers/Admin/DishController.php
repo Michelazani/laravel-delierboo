@@ -28,8 +28,14 @@ class DishController extends Controller
      */
     public function create()
     {
-        $restaurant= Restaurant::where('user_id', '=', Auth::id())->get()[0];
-        return view('admin.dishes.create', compact('restaurant'));
+        $restaurant= Restaurant::where('user_id', '=', Auth::id())->get();
+        if(count($restaurant) == 0 ){
+            // questo controller lo mando in quella rotta che apre altro controller e legge metodo index dei dishes-> quella rotta richiede id del ristorante e glielo passo da qui 
+            return redirect()->route('admin.restaurants.create');
+        } else{
+            $restaurant= $restaurant[0];
+            return view('admin.dishes.create', compact('restaurant'));
+        }
     }
 
     /**
