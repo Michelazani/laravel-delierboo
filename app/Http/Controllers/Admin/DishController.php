@@ -13,8 +13,14 @@ class DishController extends Controller
 {
     public function index(string $id)
     {
-        $dishes = Dish::where('restaurant_id', '=' , $id)->orderBy('name', 'asc')->get();
-        return view('admin.dishes.index', compact('dishes'));
+        $restaurant= Restaurant::where('user_id', '=', Auth::id())->get()[0];
+        if ($restaurant->id==$id) {
+            $dishes = Dish::where('restaurant_id', '=' , $id)->orderBy('name', 'asc')->get();
+            return view('admin.dishes.index', compact('dishes'));
+        }
+        else{
+            return redirect()->route('admin.restaurants.dishes.index',$restaurant->id );
+        }
     }
 
     /**
