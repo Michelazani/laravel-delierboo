@@ -17,7 +17,12 @@
         Type: 
         {{-- mettere il tipo --}}
         @foreach ($types as $type )
-        {{ $type-> name_type}}
+            {{ $type-> name_type}} 
+            @if ( $types[count($types) -1]->name_type == $type->name_type)
+            .
+            @else
+            ,
+            @endif 
         @endforeach
     </p> 
     <p class="">
