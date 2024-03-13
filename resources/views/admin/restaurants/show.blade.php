@@ -18,6 +18,7 @@
         {{-- mettere il tipo --}}
         @foreach ($types as $type )
             {{ $type-> name_type}} 
+            {{-- count calcola la lunghezza dell'array e gli metto -1 per evitare che da undefined, perche parte sempre da 0 e per prendere l'ultimo elemento.  --}}
             @if ( $types[count($types) -1]->name_type == $type->name_type)
             .
             @else
