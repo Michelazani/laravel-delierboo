@@ -112,4 +112,24 @@ return [
 
     'password_timeout' => 10800,
 
+    /*
+    |--------------------------------------------------------------------------
+    | Authentication Language Lines
+    |--------------------------------------------------------------------------
+    |
+    | The following language lines are used during authentication for various
+    | messages that we need to display to the user. You are free to modify
+    | these language lines according to your application's requirements.
+    |
+    */
+
+   // Messaggio di errore per credenziali non valide
+   'failed' => 'Queste credenziali non corrispondono ai nostri record.',
+    
+   // Messaggio di errore per password non corretta
+   'password' => 'La password fornita non è corretta.',
+   
+   // Messaggio di errore per troppe richieste di accesso
+   'throttle' => 'Troppi tentativi di accesso. Riprova tra :seconds secondi.',
+
 ];
