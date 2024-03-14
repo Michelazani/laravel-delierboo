@@ -27,4 +27,5 @@ Route::get('/restaurants', [ApiRestaurantController::class, 'index'])->name('api
 Route::get('/types', [ApiTypeController::class, 'index'])->name('api.type.index');
 Route::get('/dishes', [ApiDishController::class, 'index'])->name('api.dish.index');
 Route::get('/restaurants/{restaurant}/dishes', [ApiDishController::class, 'index'])->name('api.restaurants.dishes.index');
+Route::get('/restaurants/{restaurant}', [ApiRestaurantController::class, 'show'])->name('api.restaurant.show');
 
