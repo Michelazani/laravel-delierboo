@@ -35,7 +35,7 @@ Route::middleware('auth')
         Route::get('/restaurants/{restaurant}', [AdminRestaurantController::class, 'show'])->name('restaurants.show');
         // rotte per i piatti
         Route::post('/dishes', [AdminDishController::class, 'store'])->name('dishes.store');
-        Route::put('/dishes', [AdminDishController::class, 'update'])->name('dishes.update');
+        Route::put('/dishes/{dish}', [AdminDishController::class, 'update'])->name('dishes.update');
         Route::get('/dishes/create', [AdminDishController::class, 'create'])->name('dishes.create');
         Route::get('/restaurants/{restaurant}/dishes', [AdminDishController::class, 'index'])->name('restaurants.dishes.index');
         Route::get('/dishes/{dish}', [AdminDishController::class, 'show'])->name('dishes.show');

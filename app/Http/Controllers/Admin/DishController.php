@@ -100,20 +100,25 @@ class DishController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request)
-    {
-        $data = $request->validate([
-            'name' => ['required', 'min:4', 'max:40'],
-            'price' => ['required', 'decimal:2,10', 'between:0,99999999.99'],
-            'ingredients' => ['required', 'min:3', 'max:3000'],
-            'available' => ['required'],
+    public function update(Request $request, Dish $dish) {
+        $validatedData = $request->validate([
+            'name' => 'required|min:4|max:40',
+            'price' => 'required|numeric|between:0,99999999.99',
+            'ingredients' => 'required|min:3|max:3000',
+            'available' => 'required',
         ]);
-        $data=$request->all();
-        $dish= Dish::find($data['id']);
-        $dish->update($data);
-        return redirect()->route('admin.dishes.show', $data['id']);
+    
+        if ($request->hasFile('img_dish')) {
+            $validatedData['img_dish'] = Storage::put('uploads/dishes', $request->file('img_dish'));
+        } else {
+            // Mantieni l'immagine esistente se non ne viene caricata una nuova
+            unset($validatedData['img_dish']);
+        }
+    
+        $dish->update($validatedData);
+    
+        return redirect()->route('admin.dishes.show', ['dish' => $dish->id])->with('success', 'Piatto aggiornato con successo.');
     }
-
     /**
      * Remove the specified resource from storage.
      */
