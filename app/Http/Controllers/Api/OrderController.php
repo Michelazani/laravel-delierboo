@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class OrderController extends Controller
 {
@@ -29,10 +30,26 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        // $orderData= json_decode($request['data']->json());
-        // $newOrder= new Order();
-        // $newOrder->fill($orderData);
-        // $newOrder->save();
+        // $orderData= $request->json();
+        $newOrder= new Order();
+        // $newOrder->restaurant_id = $request->restaurant_id;
+
+        // $newOrder->total_price = $request->total_price;
+
+        // $newOrder->customer_address = $request->customer_address;
+
+        // $newOrder->customer_name = $request->customer_name;
+
+        // $newOrder->customer_surname = $request->customer_surname;
+
+        // $newOrder->date_and_time = $request->date_and_time;
+
+        // $newOrder->customer_phone = $request->customer_phone;
+
+        // $newOrder->customer_email = $request->customer_email;
+        $newOrder->fill($request->input());
+        // $imageSrc = Storage::put('uploads/cartellaDiProva/', $orderData);
+        $newOrder->save();
     }
 
     /**
