@@ -1,81 +1,70 @@
 @extends('layouts.app')
 
-@section('title', 'Creating a new post')
+@section('title', 'Modifica piatto')
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center ">
+    <div class="row justify-content-center">
         <div class="col-7">
             @include('layouts.partials.errors')
-            <form action="{{ route('admin.dishes.update') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('admin.dishes.update', ['dish' => $dish->id]) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
 
                 <h2 class="m-4">Modifica il piatto:</h2>
-                <div class="mb-3 input-group">
-                    <label for="name" class="input-group-text">Nome del piatto:</label>
-                    <input class="form-control" type="text" name="name" id="name" value="{{ $dish['name'] }}" >
+
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nome del piatto:</label>
+                    <input class="form-control @error('name') is-invalid @enderror" type="text" name="name" id="name" value="{{ old('name', $dish->name) }}" placeholder="Nome del piatto">
+                    @error('name')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
                 </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text">Prezzo:</span>
-                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" name="price" id="price" value="{{ $dish['price'] }}" placeholder="Es. 10.99">
-                    <span class="input-group-text">€</span>
+
+                <div class="mb-3">
+                    <label for="price" class="form-label">Prezzo:</label>
+                    <input type="text" class="form-control @error('price') is-invalid @enderror" name="price" id="price" value="{{ old('price', $dish->price) }}" placeholder="Es. 10.99">
+                    @error('price')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
                 </div>
-                
-                <div class="mb-3 input-group">
-                    <label for="ingredients" class="input-group-text">Ingredienti:</label>
-                    <textarea class="form-control"  name="ingredients" id="ingredients" cols="20" rows="5" >{{ $dish['ingredients']  }}</textarea>
+
+                <div class="mb-3">
+                    <label for="ingredients" class="form-label">Ingredienti:</label>
+                    <textarea class="form-control @error('ingredients') is-invalid @enderror" name="ingredients" id="ingredients" rows="5" placeholder="Elenco degli ingredienti">{{ old('ingredients', $dish->ingredients) }}</textarea>
+                    @error('ingredients')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
                 </div>
-                
-                <fieldset class="row mb-3">
-                    <legend class="col-form-label col-sm-2 pt-0" >Disponibile:</legend>
-                    <div class="col-sm-10">
-                    @if ($dish['available'])
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="available" id="available1" value="{{1}}"  checked>
-                            <label class="form-check-label" for="available1">
-                            Si
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="available" id="available2" value="{{0}}">
-                            <label class="form-check-label" for="available2">
-                            No
-                            </label>
-                        </div>
-                    @else
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="available" id="available1" value="{{1}}"  >
-                            <label class="form-check-label" for="available1">
-                            Si
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="available" id="available2" value="{{0}}" checked>
-                            <label class="form-check-label" for="available2">
-                            No
-                            </label>
-                        </div>
-                    @endif
+
+                <fieldset class="mb-3">
+                    <legend>Disponibile:</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="available" id="available1" value="1" @if(old('available', $dish->available)) checked @endif>
+                        <label class="form-check-label" for="available1">Si</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="available" id="available2" value="0" @if(!old('available', $dish->available)) checked @endif>
+                        <label class="form-check-label" for="available2">No</label>
                     </div>
                 </fieldset>
-                
-                <div class="mb-3 input-group">
-                    <input class="form-control" type="file" name="image_restaurant" id="image_restaurant" value="">
+
+                <div class="mb-3">
+                    <label for="img_dish" class="form-label">Immagine del piatto:</label>
+                    @if($dish->img_dish)
+                        <div class="mb-2">
+                            <img src="{{ asset('storage/'.$dish->img_dish) }}" alt="Immagine attuale" style="max-width: 100%; max-height: 300px;">
+                        </div>
+                    @endif
+                    <input class="form-control @error('img_dish') is-invalid @enderror" type="file" name="img_dish" id="img_dish">
+                    @error('img_dish')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
                 </div>
 
-                <div class="invisible">
-                    <label for="id" ></label>
-                    <input name="id" value="{{ $dish['id'] }}">
-                </div>
-
-                <div class="mb-3 input-group">
-                    <button type="submit" class="btn btn-primary m-2">
-                        Modifica piatto
-                    </button>
-                    <button type="reset" class="btn btn-warning m-2">
-                        Reset
-                    </button>
+                <div>
+                    <button type="submit" class="btn btn-primary">Modifica piatto</button>
+                    <button type="reset" class="btn btn-warning">Reset</button>
                 </div>
             </form>
         </div>
