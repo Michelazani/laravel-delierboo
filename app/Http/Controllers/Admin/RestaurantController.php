@@ -50,7 +50,7 @@ class RestaurantController extends Controller
             'address_restaurant' => ['required', 'string', 'min:7', 'max:150'],
             'vat_restaurant' => ['required', 'string', 'min:13', 'max:13', 'unique:restaurants'],
             'type' => ['required', 'array', 'min:1'], // Assicura che almeno un tipo sia selezionato
-            'image_restaurant' => ['image', 'required'],
+            // 'image_restaurant' => ['image', 'required'],
         ], [
             'name_restaurant.required' => 'Il campo nome del ristorante è obbligatorio.',
             'address_restaurant.required' => 'Il campo indirizzo del ristorante è obbligatorio.',
