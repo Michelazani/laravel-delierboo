@@ -19,7 +19,7 @@ class DishController extends Controller
             return view('admin.dishes.index', compact('dishes'));
         }
         else{
-            return redirect()->route('admin.restaurants.dishes.index',$restaurant->id );
+            return view('admin.notFound');
         }
     }
 
@@ -93,7 +93,7 @@ class DishController extends Controller
             return view('admin.dishes.edit', compact('dish'));
         }
         else{
-            return redirect()->route('admin.restaurants.dishes.index',$restaurant->id );
+            return view('admin.notFound');
         }
     }
 

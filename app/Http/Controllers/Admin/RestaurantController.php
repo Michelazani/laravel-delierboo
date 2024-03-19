@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Dish;
 use App\Models\Restaurant;
 use App\Models\RestaurantType;
 use App\Models\Type;
@@ -84,7 +85,10 @@ class RestaurantController extends Controller
      */
     public function show(string $id)
     {
-        $restaurant = Restaurant::where('user_id', '=', Auth::id())->first();
+        $restaurant= Restaurant::where('user_id', '=', Auth::id())->first();
+        if ($restaurant->id!=$id) {
+            return view('admin.notFound');
+        }
         $types = Restaurant::join('restaurant_type', 'restaurants.id', '=', 'restaurant_type.restaurant_id')
             ->join('types', 'types.id', '=', 'restaurant_type.type_id')
             ->where('user_id', '=', Auth::id())->get();
