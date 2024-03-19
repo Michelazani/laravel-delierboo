@@ -32,6 +32,17 @@ class OrderController extends Controller
     {
         // $orderData= $request->json();
         $newOrder= new Order();
+        $dishesId= []; 
+        $dishesQuantity= []; 
+
+        // $dati = $request->json();
+        // $datiJson = json_decode($request)
+        
+        // foreach(json_decode($request) as $value => $key){
+        //     // array_push($dishesId, $value->id);
+        //     // array_push($dishesQuantity, $value->quantity);
+        // }
+        // $newOrder->dishes()->attach($dishesId, $dishesQuantity);
         // $newOrder->restaurant_id = $request->restaurant_id;
 
         // $newOrder->total_price = $request->total_price;
