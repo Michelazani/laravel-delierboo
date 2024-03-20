@@ -28,7 +28,7 @@ class RedirectController extends Controller
     {
         // metodo sul controller che manda l'utente registrato ai suoi piatti
         $restaurant = Restaurant::where('user_id', '=', Auth::id())->get();
-        if(count($restaurant) == 0 ){
+        if(count($restaurant) != 0 ){
             // questo controller lo mando in quella rotta che apre altro controller e legge metodo index dei dishes-> quella rotta richiede id del ristorante e glielo passo da qui 
             return redirect()->route('admin.restaurants.create');
         } else{
