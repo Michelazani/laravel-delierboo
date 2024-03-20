@@ -3,11 +3,11 @@
 @section('title', 'Admin Restaurant')
 
 @section('content')
-<div class="container ">
+<div class="container">
     <h1 style>
         Ordini
     </h1>
-        <div class="row d-flex justify-content-between ">
+        <div class="row d-flex justify-content-evenly row-cols-sm-10 row-cols-lg-3">
 
             @foreach ($orders as $order)
             <article class="card my_card  p-3 ">

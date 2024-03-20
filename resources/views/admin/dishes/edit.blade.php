@@ -3,9 +3,9 @@
 @section('title', 'Modifica piatto')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row justify-content-center">
-        <div class="col-7">
+        <div class="col-xs-10 col-sm-10 col-md-9 col-lg-7">
             @include('layouts.partials.errors')
             <form action="{{ route('admin.dishes.update', ['dish' => $dish->id]) }}" method="POST" enctype="multipart/form-data">
                 @csrf
@@ -63,8 +63,8 @@
                 </div>
 
                 <div>
-                    <button type="submit" class="btn btn-primary">Modifica piatto</button>
-                    <button type="reset" class="btn btn-warning">Reset</button>
+                    <button type="submit" class="btn btn-primary rounded-pill">Modifica piatto</button>
+                    <button type="reset" class="btn btn-warning rounded-pill">Reset</button>
                 </div>
             </form>
         </div>

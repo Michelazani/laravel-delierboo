@@ -3,9 +3,9 @@
 @section('title', 'Creating a new post')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row justify-content-center">
-        <div class="col-7">
+        <div class="col-xs-10 col-sm-10 col-md-9 col-lg-7">
             @include('layouts.partials.errors')
             <form action="{{ route('admin.restaurants.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf

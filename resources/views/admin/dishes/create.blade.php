@@ -3,9 +3,9 @@
 @section('title', 'Creating a new post')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row justify-content-center">
-        <div class="col-7">
+        <div class="col-xs-10 col-sm-10 col-md-9 col-lg-7">
             <form action="{{ route('admin.dishes.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
@@ -42,9 +42,9 @@
                     @enderror
                 </div>
                 
-                <fieldset class="row mb-3">
-                    <legend class="col-form-label col-sm-2 pt-0">Disponibile <span style="color: red">*</span>:</legend>
-                    <div class="col-sm-10">
+                <fieldset class="row mb-3 ">
+                    <legend class="col-form-label col-sm-2 pt-0">Disponibile<span style="color: red">*</span>:</legend>
+                    <div class=" ">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="available" id="available1" value="1" {{ old('available') == '1' ? 'checked' : '' }}>
                             <label class="form-check-label" for="available1">
@@ -80,10 +80,10 @@
                 </div>
 
                 <div class="mb-3 input-group">
-                    <button type="submit" class="btn btn-primary m-2">
+                    <button type="submit" class="btn btn-primary m-2 rounded-pill">
                         Aggiungi piatto
                     </button>
-                    <button type="reset" class="btn btn-warning m-2">
+                    <button type="reset" class="btn btn-warning m-2 rounded-pill">
                         Reset
                     </button>
                 </div>
