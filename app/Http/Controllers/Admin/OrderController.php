@@ -15,9 +15,9 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $targetRestaurant = Restaurant::where('user_id', '=', Auth::id())->orderBy('date_and_time', 'asc')->get()[0];
-        $orders = Order::where('restaurant_id', '=', $targetRestaurant->id)->get();
-
+        $targetRestaurant = Restaurant::where('user_id', '=', Auth::id())->get()[0];
+        $orders = Order::where('restaurant_id', '=', $targetRestaurant->id)->orderBy('date_and_time', 'desc')->get();
+        return view('admin.orders.index', compact('orders'));
     }
 
     /**
@@ -41,15 +41,15 @@ class OrderController extends Controller
      */
     public function show(string $id)
     {
-        $targetRestaurant = Restaurant::where('user_id', '=', Auth::id())->get()[0];
-        $order = Order::where('id', '=', $id)->get();
-        if(count($order) != 0){
-            $order = $order[0];
-            if($targetRestaurant->id == $order->restaurant_id){
-                return view('admin.orders.show', compact('order'));
-            }
-        }
-        return view('admin.notFound');
+        // $targetRestaurant = Restaurant::where('user_id', '=', Auth::id())->get()[0];
+        // $order = Order::where('id', '=', $id)->get();
+        // if(count($order) != 0){
+        //     $order = $order[0];
+        //     if($targetRestaurant->id == $order->restaurant_id){
+        //         return view('admin.orders.show', compact('order'));
+        //     }
+        // }
+        // return view('admin.notFound');
     }
 
     /**
