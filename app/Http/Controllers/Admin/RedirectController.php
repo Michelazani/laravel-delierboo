@@ -41,9 +41,9 @@ class RedirectController extends Controller
         $restaurant = Restaurant::where('user_id', '=', Auth::id())->get();
         if(count($restaurant) == 0 ){
             // questo controller lo mando in quella rotta che apre altro controller e legge metodo index dei dishes-> quella rotta richiede id del ristorante e glielo passo da qui 
-            return redirect()->route('admin.orders.index');
+            return redirect()->route('admin.restaurants.create');
         } else{
-            return redirect()->route('admin.restaurants.dishes.index', $restaurant[0]->id);
+            return redirect()->route('admin.orders.index');
         }
     }
 

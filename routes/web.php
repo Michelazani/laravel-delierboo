@@ -43,7 +43,7 @@ Route::middleware('auth')
         Route::get('/dishes/{dish}/edit', [AdminDishController::class, 'edit'])->name('dishes.edit');
         Route::delete('dishes/{dish}', [AdminDishController::class, 'destroy'])->name('dishes.destroy');
 
-        Route::get('/orders', [AdminOrderController::class, 'index'])->name('admin.orders.index');
+        Route::get('/orders', [AdminOrderController::class, 'index'])->name('orders.index');
         Route::get('/orders-redirect', [AdminRedirectController::class, 'ordersRedirect'])->name('ordersRedirect');
 
     });
