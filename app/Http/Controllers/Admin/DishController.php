@@ -52,9 +52,10 @@ class DishController extends Controller
 
         // $newRestaurantData = $request->all();
         $newDishData = $request->all();
-
         if(array_key_exists('img_dish', $newDishData)){
-            $imageSrc = Storage::put('uploads/dishes', $newDishData['img_dish']);
+            $restaurant= Restaurant::where('user_id', '=', Auth::id())->get()[0];
+
+            $imageSrc = Storage::put('uploads/restaurants/' . str_replace(' ', '-', $restaurant['name_restaurant']) . '/id-' . Auth::id(), $newDishData['img_dish']);
         }
         else{
             $imageSrc = 'uploads/dishes/default-img/dish_default.png';
@@ -109,7 +110,8 @@ class DishController extends Controller
         ]);
     
         if ($request->hasFile('img_dish')) {
-            $validatedData['img_dish'] = Storage::put('uploads/dishes', $request->file('img_dish'));
+            $restaurant= Restaurant::where('user_id', '=', Auth::id())->get()[0];
+            $validatedData['img_dish'] = Storage::put('uploads/restaurants/' . str_replace(' ', '-', $restaurant['name_restaurant']) . '/id-' . Auth::id(), $request->file('img_dish'));
         } else {
             // Mantieni l'immagine esistente se non ne viene caricata una nuova
             unset($validatedData['img_dish']);
