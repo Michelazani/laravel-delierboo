@@ -38,29 +38,37 @@ class OrderController extends Controller
         // $dati = $request->json();
         // $datiJson = json_decode($request)
         
-        // foreach(json_decode($request) as $value => $key){
-        //     // array_push($dishesId, $value->id);
-        //     // array_push($dishesQuantity, $value->quantity);
-        // }
-        // $newOrder->dishes()->attach($dishesId, $dishesQuantity);
+        foreach($request['order_dishes'] as $value){
+            array_push($dishesId, $value['id']);
+            array_push($dishesQuantity, $value['quantity']);
+        }
         // $newOrder->restaurant_id = $request->restaurant_id;
 
         // $newOrder->total_price = $request->total_price;
-
+        
         // $newOrder->customer_address = $request->customer_address;
-
+        
         // $newOrder->customer_name = $request->customer_name;
-
+        
         // $newOrder->customer_surname = $request->customer_surname;
-
+        
         // $newOrder->date_and_time = $request->date_and_time;
-
+        
         // $newOrder->customer_phone = $request->customer_phone;
-
+        
         // $newOrder->customer_email = $request->customer_email;
         $newOrder->fill($request->input());
         // $imageSrc = Storage::put('uploads/cartellaDiProva/', $orderData);
         $newOrder->save();
+        
+        for($i = 0; $i<count($dishesId); $i++){
+            $newOrder->dishes()->attach($dishesId[$i], ['dish_quantity' => $dishesQuantity[$i]]);
+        }
+        
+        return response()->json([
+            'result' => $dishesId,
+            'result1' => $dishesQuantity
+        ]);
     }
 
     /**

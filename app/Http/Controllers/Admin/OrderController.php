@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Dish;
 use App\Models\Order;
 use App\Models\Restaurant;
 use Illuminate\Http\Request;
@@ -17,7 +18,8 @@ class OrderController extends Controller
     {
         $targetRestaurant = Restaurant::where('user_id', '=', Auth::id())->get()[0];
         $orders = Order::where('restaurant_id', '=', $targetRestaurant->id)->orderBy('date_and_time', 'desc')->get();
-        return view('admin.orders.index', compact('orders'));
+        $dishes= Dish::join('dish_order', 'dishes.id', '=', 'dish_order.dish_id')->where('restaurant_id', '=', $targetRestaurant->id)->get();
+        return view('admin.orders.index', compact('orders', 'dishes'));
     }
 
     /**
