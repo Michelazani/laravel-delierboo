@@ -3,23 +3,24 @@
 @section('title', 'Admin Restaurant')
 
 @section('content')
-<h1>
-    Ordini
-</h1>
-<ul class="">
-    @foreach ($orders as $order)
-    <li>
-        <article class="card w-25 text-center mx-auto p-4  m-4">
-        
-            <p>
-                {{$order->date_and_time}}
-            </p>
-        
-            <p>
-                {{ $order->customer_name }}
-            </p>
+<div class="container ">
+    <h1 style>
+        Ordini
+    </h1>
+        <div class="row d-flex justify-content-between ">
+
+            @foreach ($orders as $order)
+            <article class="card my_card text-center p-5 ">
+                
+                <p>
+                    {{$order->date_and_time}}
+                </p>
+                
+                <p>
+                    {{ $order->customer_name }}
+                </p>
             {{-- <p>
-                    Price: {{ $dish->type}}
+                Price: {{ $dish->type}}
             </p> --}}
             <p>
                 {{ $order->customer_surname }}
@@ -36,10 +37,9 @@
             <p>
                 {{ $order->total_price }}
             </p>
-        
-            </div>
+            
         </article>
-    </li>
-    @endforeach
-</ul>
+        @endforeach
+        </div>
+    </div>
 @endsection

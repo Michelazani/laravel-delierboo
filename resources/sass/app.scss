@@ -6,4 +6,7 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
-
+.card.my_card{
+    margin: 0.5rem;
+    width: calc((100% / 4) - 4rem);
+}
