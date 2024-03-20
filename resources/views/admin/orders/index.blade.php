@@ -10,32 +10,32 @@
         <div class="row d-flex justify-content-between ">
 
             @foreach ($orders as $order)
-            <article class="card my_card text-center p-5 ">
+            <article class="card my_card  p-3 ">
                 
                 <p>
-                    {{$order->date_and_time}}
+                    Data: {{$order->date_and_time}}
                 </p>
                 
                 <p>
-                    {{ $order->customer_name }}
+                    Nome: {{ $order->customer_name }}
                 </p>
             {{-- <p>
                 Price: {{ $dish->type}}
             </p> --}}
             <p>
-                {{ $order->customer_surname }}
+                Cognome: {{ $order->customer_surname }}
             </p>
             <p>
-                {{ $order->customer_addres }}
+                Indirizzo: {{ $order->customer_addres }}
             </p>
             <p>
-                {{ $order->customer_email }}
+                Email: {{ $order->customer_email }}
             </p>
             <p>
-                {{ $order->customer_phone }}
+                Telefono: {{ $order->customer_phone }}
             </p>
             <p>
-                {{ $order->total_price }}
+                Totale: {{ $order->total_price }}
             </p>
             
         </article>
