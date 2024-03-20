@@ -5,16 +5,17 @@
 @section('content')
 <div class="container-fluid">
 <div class="row">
+    <div class="col-xs-8 col-sm-10 col-md-9 col-lg-7 mx-auto">
 
-    <article class="card col-xs-8 col-sm-10 col-md-9 col-lg-7 text-center mx-auto p-4  m-4">
-        <h1>
-            {{ $restaurant->name_restaurant }}
-        </h1>
-        <div class="card-image mt-3">
-            <img class="img-fluid rounded" src="{{ asset('storage') . '/' . $restaurant->image_restaurant }}" alt="Restaurant Image">
-        </div>
-        <p class="mt-3">
-        Email: {{ Auth::user()->email}}
+        <article class="card  text-center mx-auto p-4  m-4">
+            <h1>
+                {{ $restaurant->name_restaurant }}
+            </h1>
+            <div class="card-image mt-3">
+                <img class="img-fluid rounded" src="{{ asset('storage') . '/' . $restaurant->image_restaurant }}" alt="Restaurant Image">
+            </div>
+            <p class="mt-3">
+                Email: {{ Auth::user()->email}}
     </p>
     <p>
         Type: 
@@ -34,6 +35,7 @@
     </p>  
 </div>
 </article>
+</div>
 </div>
 </div>
 @endsection

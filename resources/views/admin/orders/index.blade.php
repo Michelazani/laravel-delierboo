@@ -26,7 +26,7 @@
                 Cognome: {{ $order->customer_surname }}
             </p>
             <p>
-                Indirizzo: {{ $order->customer_addres }}
+                Indirizzo: {{ $order->customer_address }}
             </p>
             <p>
                 Email: {{ $order->customer_email }}
