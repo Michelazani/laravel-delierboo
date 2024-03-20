@@ -40,18 +40,20 @@
 
             <p>Piatti ordinati:</p>
             <ul class="group-list">
-                @foreach ($dishes as $dish)     
-                <li class="list-item-group">
-                    <p>
-                        Nome piatto: {{$dish->name}}
-                    </p>
-                    <p>
-                        Quantità: {{$dish->dish_quantity}}
-                    </p>
-                    <p>
-                        Prezzo: €{{$dish->price}}
-                    </p>
-                </li>
+                @foreach ($dishes as $dish)
+                    @if($dish->order_id == $order->id)   
+                        <li class="list-item-group">
+                            <p>
+                                Nome piatto: {{$dish->name}}
+                            </p>
+                            <p>
+                                Quantità: {{$dish->dish_quantity}}
+                            </p>
+                            <p>
+                                Prezzo: €{{$dish->price}}
+                            </p>
+                        </li>
+                        @endif
                 @endforeach
             </ul>
             
